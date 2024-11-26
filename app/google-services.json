@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172747403192",
+    "project_id": "mobile-b531e",
+    "storage_bucket": "mobile-b531e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172747403192:android:2be9ce442b751e702d694d",
+        "android_client_info": {
+          "package_name": "Nhom2.com.example.doanmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvvkOsP_lVkhwCaoY7hpTTEUUWN92owHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
