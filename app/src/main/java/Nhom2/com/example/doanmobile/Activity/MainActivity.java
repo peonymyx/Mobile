@@ -1,10 +1,9 @@
-package Nhom2.com.example.doanmobile;
+package Nhom2.com.example.doanmobile.Activity;
 
 import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -13,10 +12,10 @@ import java.util.List;
 
 import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.Models.Order;
-import Nhom2.com.example.doanmobile.Models.Product;
 import Nhom2.com.example.doanmobile.Models.Review;
 import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.Models.WishListItem;
+import Nhom2.com.example.doanmobile.R;
 
 public class MainActivity extends AppCompatActivity {
 
