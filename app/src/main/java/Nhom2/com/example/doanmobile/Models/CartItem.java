@@ -6,15 +6,16 @@ public class CartItem {
     private String name;
     private int quantity;
     private double price;
-
+    private String size;
     public CartItem() {
     }
 
-    public CartItem(String productID, String name, int quantity, double price) {
+    public CartItem(String productID, String name, int quantity, double price, String size) {
         this.productID = productID;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
+        this.size = size;
     }
 
     // Getters and setters
@@ -29,7 +30,13 @@ public class CartItem {
     public String getName() {
         return name;
     }
+    public String getSize() {
+        return size;
+    }
 
+    public void setSize(String size) {
+        this.size = size;
+    }
     public void setName(String name) {
         this.name = name;
     }

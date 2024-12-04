@@ -8,6 +8,7 @@ public class Product {
     private String productID;
     private String name;
     private String description;
+    private List<String> sizes;
     private double price;
     private String categoryID;
     private List<ProductReview> reviews;
@@ -15,15 +16,15 @@ public class Product {
     public Product() {
     }
 
-    public Product(String productID, String name, String description, double price, String categoryID, List<ProductReview> reviews) {
+    public Product(String productID, String name, String description, List<String> sizes, double price, String categoryID, List<ProductReview> reviews) {
         this.productID = productID;
         this.name = name;
         this.description = description;
+        this.sizes = sizes;
         this.price = price;
         this.categoryID = categoryID;
         this.reviews = reviews;
     }
-
     // Getters and setters
     public String getProductID() {
         return productID;
@@ -41,6 +42,13 @@ public class Product {
         this.name = name;
     }
 
+    public List<String> getSizes() {
+        return sizes;
+    }
+
+    public void setSizes(List<String> sizes) {
+        this.sizes = sizes;
+    }
     public String getDescription() {
         return description;
     }
