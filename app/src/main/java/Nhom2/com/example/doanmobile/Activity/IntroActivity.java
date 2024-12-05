@@ -10,12 +10,17 @@ public class IntroActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      binding=ActivityIntroBinding.inflate(getLayoutInflater());
+        binding = ActivityIntroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Navigate to Login Activity
+        binding.textView4.setOnClickListener(v -> {
+            startActivity(new Intent(this, LoginActivity.class));
+        });
 
+        // Start app main flow
         binding.startBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity2.class));
+            startActivity(new Intent(this, LoginActivity.class));
             finish();
         });
 
