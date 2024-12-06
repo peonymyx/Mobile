@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             // Chuyển đến màn hình chính
                             Intent intent = new Intent(this, MainActivity2.class);
+                            intent.putExtra("userID", uid);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                             finish();
