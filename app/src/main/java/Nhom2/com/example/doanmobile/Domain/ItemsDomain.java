@@ -11,7 +11,6 @@ public class ItemsDomain implements Serializable {
     private double oldPrice;
     private int review;
     private double rating;
-    private int NumberinCart;
 
     public ItemsDomain() {
     }
@@ -82,12 +81,5 @@ public class ItemsDomain implements Serializable {
         this.rating = rating;
     }
 
-    public int getNumberinCart() {
-        return NumberinCart;
-    }
-
-    public void setNumberinCart(int numberinCart) {
-        this.NumberinCart = numberinCart;
-    }
 }
 

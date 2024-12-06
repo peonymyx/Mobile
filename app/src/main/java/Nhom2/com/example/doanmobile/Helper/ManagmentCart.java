@@ -66,7 +66,16 @@ public class ManagmentCart {
         tinyDB.putListObject("CartList", listItem);
         changeNumberItemsListener.changed();
     }
+    public void clearCart() {
+        // Clear the list of cart items
+        ArrayList<CartItem> emptyCart = new ArrayList<>();
 
+        // Save the empty list back to TinyDB
+        tinyDB.putListObject("CartList", emptyCart);
+
+        // Optionally, show a toast message to notify the user
+        Toast.makeText(context, "Cart is now empty", Toast.LENGTH_SHORT).show();
+    }
     public Double getTotalFee() {
         ArrayList<CartItem> listItem2 = getListCart();
         double fee = 0;

@@ -5,25 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.ProfileActivity">
 
     <!-- Background Image -->
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="492dp"
-        android:layout_height="366dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bacgroud"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- User Info Section -->
+
+    <!-- Back Button -->
+
     <LinearLayout
         android:id="@+id/userInfoSection"
-        android:layout_width="283dp"
-        android:layout_height="234dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="189dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/border"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,23 +28,22 @@
 
         <ImageView
             android:id="@+id/imgUser"
-            android:layout_width="187dp"
-            android:layout_height="180dp"
+            android:layout_width="154dp"
+            android:layout_height="132dp"
             android:layout_marginBottom="16dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/btn_4" />
+            app:srcCompat="@drawable/baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/nameUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User Name"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Back Button -->
     <ImageView
         android:id="@+id/backBtn"
         android:layout_width="64dp"
@@ -62,19 +57,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Details Section -->
+
     <LinearLayout
         android:id="@+id/detailsSection"
         android:layout_width="446dp"
         android:layout_height="450dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         android:paddingHorizontal="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7">
+        app:layout_constraintTop_toBottomOf="@+id/userInfoSection">
 
         <!-- ID -->
 
+        <!-- Password -->
+
+        <!-- Email -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="52dp"
@@ -97,9 +97,6 @@
                 android:textSize="24sp" />
         </LinearLayout>
 
-        <!-- Password -->
-
-        <!-- Email -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="54dp"
@@ -124,8 +121,8 @@
 
         <!-- Phone Number -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="86dp"
+            android:layout_width="399dp"
+            android:layout_height="94dp"
             android:orientation="horizontal"
             android:paddingVertical="8dp">
 
@@ -191,7 +188,7 @@
 
         <LinearLayout
             android:layout_width="400dp"
-            android:layout_height="50dp"
+            android:layout_height="74dp"
             android:orientation="horizontal"></LinearLayout>
 
         <Button

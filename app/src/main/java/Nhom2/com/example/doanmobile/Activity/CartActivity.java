@@ -1,12 +1,17 @@
 package Nhom2.com.example.doanmobile.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 import Nhom2.com.example.doanmobile.Adapter.CartAdapter;
 import Nhom2.com.example.doanmobile.Helper.ManagmentCart;
+import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.databinding.ActivityCartBinding;
 
 public class CartActivity extends BaseActivity {
@@ -19,7 +24,7 @@ public class CartActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
          binding = ActivityCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        binding.checkoutBtn.setOnClickListener(v -> startActivity(new Intent(CartActivity.this, CheckoutActivity.class)));
         managmentCart = new ManagmentCart(this);
 
         calculatorCart();
@@ -27,7 +32,16 @@ public class CartActivity extends BaseActivity {
         initCartList();
 
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        // Reload cart data and update UI
+        ArrayList<CartItem> cartItems = managmentCart.getListCart();
+        CartAdapter cartAdapter = new CartAdapter(cartItems, this, this::calculatorCart);
+        binding.cartView.setAdapter(cartAdapter);
+        cartAdapter.notifyDataSetChanged();
+    }
     private void initCartList() {
         if (managmentCart.getListCart().isEmpty()) {
             binding.emptyTxt.setVisibility(View.VISIBLE);

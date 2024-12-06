@@ -19,10 +19,11 @@ import Nhom2.com.example.doanmobile.databinding.ViewholderCartBinding;
 import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
-    ArrayList<CartItem> listItemSelected;
+    private ArrayList<CartItem> listItemSelected;
     ChangeNumberItemsListener changeNumberItemsListener;
     private ManagmentCart managmentCart;
 
+    public ArrayList<CartItem> getListItemSelected(){ return listItemSelected;}
     public CartAdapter(ArrayList<CartItem> listItemSelected, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
         this.listItemSelected = listItemSelected;
         this.changeNumberItemsListener = changeNumberItemsListener;

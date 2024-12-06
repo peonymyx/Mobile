@@ -3,7 +3,6 @@ package Nhom2.com.example.doanmobile.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,56 +16,65 @@ import Nhom2.com.example.doanmobile.Adapter.WishListAdapter;
 import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
 import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.R;
+import Nhom2.com.example.doanmobile.databinding.ActivityWishlistBinding;  // Import the generated ViewBinding class
 
 public class WishlistActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private ActivityWishlistBinding binding;  // Declare the ViewBinding variable
     private WishListAdapter adapter;
     private ArrayList<ItemsDomain> wishListItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wishlist);
 
-        // Khởi tạo RecyclerView
-        recyclerView = findViewById(R.id.recyclerView_wishlist);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        // Initialize the ViewBinding
+        binding = ActivityWishlistBinding.inflate(getLayoutInflater());  // Use inflate to bind the layout
+        setContentView(binding.getRoot());  // Set the root view
 
-        // Lấy danh sách yêu thích của người dùng hiện tại
+        // Initialize RecyclerView using binding
+        binding.wishlistView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Set up the back button using binding
+        binding.backBtn.setOnClickListener(v -> finish());  // Make sure 'backBtn' is correctly referenced
+
+        // Fetch and display the user's wishlist
         fetchCurrentUserWishlist();
     }
 
     private void fetchCurrentUserWishlist() {
-        // Lấy ID người dùng hiện tại
+        // Get the current user's ID
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        // Lấy tham chiếu đến Firestore
+        // Get Firestore reference
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        // Lấy dữ liệu người dùng từ Firestore
+        // Fetch user data from Firestore
         db.collection("users").document(userId).get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
-                        // Lấy đối tượng User từ Firestore
+                        // Get the User object from Firestore
                         User currentUser = documentSnapshot.toObject(User.class);
 
-                        // Kiểm tra xem danh sách yêu thích có sẵn không và gán nó vào danh sách địa phương
+                        // Clear the previous wishlist items to avoid duplicates
+                        wishListItems.clear();
+
+                        // Check if the wishlist exists and add items to the local list
                         if (currentUser != null && currentUser.getWishList() != null) {
                             wishListItems.addAll(currentUser.getWishList());
                         }
 
-                        // Thiết lập adapter với dữ liệu danh sách yêu thích đã lấy
+                        // Set up the adapter with the wishlist data
                         adapter = new WishListAdapter(wishListItems);
-                        recyclerView.setAdapter(adapter);
+                        binding.wishlistView.setAdapter(adapter);  // Use binding.wishlistView
                     } else {
-                        // Xử lý trường hợp không tìm thấy dữ liệu người dùng
-                        Toast.makeText(WishlistActivity.this, "Dữ liệu người dùng không tìm thấy", Toast.LENGTH_SHORT).show();
+                        // Handle case when user data is not found
+                        Toast.makeText(WishlistActivity.this, "User data not found", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(e -> {
-                    // Xử lý lỗi
-                    Toast.makeText(WishlistActivity.this, "Lỗi khi lấy dữ liệu: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    // Handle error when fetching data
+                    Toast.makeText(WishlistActivity.this, "Error fetching data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
 }

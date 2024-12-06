@@ -128,7 +128,7 @@ public class DetailActivity extends AppCompatActivity {
 
         binding.backBtn.setOnClickListener(v -> finish());
     }
-    private void addWishList(ItemsDomain item) {
+    private void addWishList(final ItemsDomain item) {  // Đánh dấu item là final
         // Lấy ID người dùng hiện tại
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -148,14 +148,29 @@ public class DetailActivity extends AppCompatActivity {
                                 currentUser.setWishList(new ArrayList<>());  // Nếu không có thì tạo mới danh sách
                             }
 
-                            // Thêm món đồ vào danh sách yêu thích
-                            currentUser.getWishList().add(item);
+                            // Kiểm tra xem sản phẩm đã có trong danh sách yêu thích chưa
+                            boolean productExists = false;
+                            for (ItemsDomain wishListItem : currentUser.getWishList()) {
+                                if (wishListItem.getTitle().equals(item.getTitle())) {  // So sánh theo Tên sản phẩm
+                                    // Nếu sản phẩm đã có, xóa nó khỏi danh sách
+                                    currentUser.getWishList().remove(wishListItem);
+                                    productExists = true;
+                                    break;
+                                }
+                            }
+
+                            if (!productExists) {
+                                // Nếu sản phẩm chưa có, thêm nó vào danh sách
+                                currentUser.getWishList().add(item);
+                            }
 
                             // Cập nhật lại danh sách yêu thích của người dùng trong Firestore
+                            boolean finalProductExists = productExists;
                             db.collection("users").document(userId).set(currentUser)
                                     .addOnSuccessListener(aVoid -> {
-                                        // Hiển thị thông báo khi đã thêm vào danh sách yêu thích
-                                        Toast.makeText(DetailActivity.this, "Đã thêm vào danh sách yêu thích", Toast.LENGTH_SHORT).show();
+                                        // Hiển thị thông báo khi đã thêm hoặc xóa sản phẩm trong danh sách yêu thích
+                                        String message = finalProductExists ? "Đã xóa khỏi danh sách yêu thích" : "Đã thêm vào danh sách yêu thích";
+                                        Toast.makeText(DetailActivity.this, message, Toast.LENGTH_SHORT).show();
                                     })
                                     .addOnFailureListener(e -> {
                                         // Xử lý lỗi khi không thể cập nhật Firestore
@@ -171,5 +186,7 @@ public class DetailActivity extends AppCompatActivity {
                     // Xử lý lỗi khi không thể lấy tài liệu người dùng
                     Toast.makeText(DetailActivity.this, "Lỗi khi lấy dữ liệu người dùng: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
-        }
+    }
+
+
 }
