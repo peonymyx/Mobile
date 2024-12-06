@@ -1,7 +1,9 @@
 package Nhom2.com.example.doanmobile.Activity;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +15,7 @@ import Nhom2.com.example.doanmobile.Adapter.SliderAdapter;
 import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
 import Nhom2.com.example.doanmobile.Domain.SliderItems;
 import Nhom2.com.example.doanmobile.Helper.ManagmentCart;
+import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.databinding.ActivityDetailBinding;
 
 import java.util.ArrayList;
@@ -22,6 +25,9 @@ public class DetailActivity extends AppCompatActivity {
     private ItemsDomain object;
     private int numberOrder = 1;
     private ManagmentCart managmentCart;
+
+    String selectedColor = "";
+    String selectedSize = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,9 @@ public class DetailActivity extends AppCompatActivity {
         initColor();
     }
 
+    private void handleSelectColor(String color) {
+        selectedColor = color;  // Store the selected color
+    }
     private void initColor() {
         ArrayList<String> list = new ArrayList<>();
         list.add("#006fc4");
@@ -44,11 +53,19 @@ public class DetailActivity extends AppCompatActivity {
         list.add("#398d41");
         list.add("#0c3c72");
         list.add("#829db5");
-
-        binding.recyclerColor.setAdapter(new ColorAdapter(list));
+        ColorAdapter colorAdapter = new ColorAdapter(list);
+        binding.recyclerColor.setAdapter(colorAdapter);
         binding.recyclerColor.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        // Listen for color selection
+        colorAdapter.setOnItemClickListener((color) -> {
+            handleSelectColor(color);
+        });
     }
 
+    private void handleSelectedSize(String size){
+        selectedSize = size; // Lưu kích thước được chọn
+    }
     private void initSize() {
         ArrayList<String> list = new ArrayList<>();
         list.add("S");
@@ -56,8 +73,14 @@ public class DetailActivity extends AppCompatActivity {
         list.add("L");
         list.add("XL");
         list.add("XXL");
-        binding.recyclerSize.setAdapter(new SizeAdapter(list));
+        SizeAdapter sizeAdapter = new SizeAdapter(list);
+        binding.recyclerSize.setAdapter(sizeAdapter);
         binding.recyclerSize.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        // Lắng nghe sự kiện chọn kích thước
+        sizeAdapter.setOnItemClickListener((size) -> {
+            handleSelectedSize(size);
+        });
     }
 
     private void initBanners() {
@@ -81,10 +104,21 @@ public class DetailActivity extends AppCompatActivity {
         binding.descriptionTxt.setText(object.getDescription());
 
         binding.AddtoCartBtn.setOnClickListener(v -> {
-            object.setNumberinCart(numberOrder);
-            managmentCart.insertItem(object);
+            // Create a new CartItem from the selected item (ItemsDomain)
+            CartItem cartItem = new CartItem();
+            cartItem.setTitle(object.getTitle());
+            cartItem.setPrice(object.getPrice());
+            cartItem.setQuantity(numberOrder);
+            cartItem.setPicUrl(object.getPicUrl());
+            cartItem.setSize(selectedSize);  // Assuming selectedSize is set somewhere
+            cartItem.setColor(selectedColor);  // Assuming selectedColor is set somewhere
+
+            Log.d("CartItem: ", selectedColor);
+            // Insert the item into the cart
+            managmentCart.insertItem(cartItem);
         });
 
         binding.backBtn.setOnClickListener(v -> finish());
     }
+
 }

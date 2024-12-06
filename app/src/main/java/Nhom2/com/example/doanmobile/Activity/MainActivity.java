@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                                 // Log thông tin về Cart
                                 if (user.getCart() != null) {
                                     for (CartItem cartItem : user.getCart()) {
-                                        Log.d("MainActivity", "Cart Item: " + cartItem.getName() +
+                                        Log.d("MainActivity", "Cart Item: " + cartItem.getTitle() +
                                                 ", Quantity: " + cartItem.getQuantity() +
                                                 ", Price: " + cartItem.getPrice());
                                     }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                         // Log thông tin các CartItem trong Order
                                         if (order.getItems() != null) {
                                             for (CartItem cartItem : order.getItems()) {
-                                                Log.d("MainActivity", "Order CartItem: " + cartItem.getName() +
+                                                Log.d("MainActivity", "Order CartItem: " + cartItem.getTitle() +
                                                         ", Quantity: " + cartItem.getQuantity() +
                                                         ", Price: " + cartItem.getPrice());
                                             }
