@@ -44,17 +44,6 @@ public class MainActivity2 extends BaseActivity {
         bottomNavigation();
     }
 
-    private void setupLogout() {
-        // Add logout functionality
-        binding.logoutBtn.setOnClickListener(v -> {
-            mAuth.signOut();
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        });
-    }
-
 
     private void bottomNavigation() {
         binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity2.this, CartActivity.class)));
