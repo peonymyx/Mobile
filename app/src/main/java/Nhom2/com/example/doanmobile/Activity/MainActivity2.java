@@ -68,6 +68,7 @@ public class MainActivity2 extends BaseActivity {
                 startActivity(intent);
             }
         });
+        binding.WishList.setOnClickListener(v -> startActivity(new Intent(MainActivity2.this, WishlistActivity.class)));
     }
 
     private void initPopular() {

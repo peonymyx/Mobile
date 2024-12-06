@@ -4,10 +4,14 @@ package Nhom2.com.example.doanmobile.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import Nhom2.com.example.doanmobile.Adapter.ColorAdapter;
 import Nhom2.com.example.doanmobile.Adapter.SizeAdapter;
@@ -16,6 +20,7 @@ import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
 import Nhom2.com.example.doanmobile.Domain.SliderItems;
 import Nhom2.com.example.doanmobile.Helper.ManagmentCart;
 import Nhom2.com.example.doanmobile.Models.CartItem;
+import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.databinding.ActivityDetailBinding;
 
 import java.util.ArrayList;
@@ -117,8 +122,54 @@ public class DetailActivity extends AppCompatActivity {
             // Insert the item into the cart
             managmentCart.insertItem(cartItem);
         });
+        binding.wishListBtn.setOnClickListener(v -> {
+            addWishList(object);
+        });
 
         binding.backBtn.setOnClickListener(v -> finish());
     }
+    private void addWishList(ItemsDomain item) {
+        // Lấy ID người dùng hiện tại
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        // Lấy tham chiếu đến Firestore
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // Lấy tài liệu người dùng từ Firestore
+        db.collection("users").document(userId).get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        // Lấy đối tượng User từ Firestore
+                        User currentUser = documentSnapshot.toObject(User.class);
+
+                        if (currentUser != null) {
+                            // Kiểm tra xem danh sách wishList có sẵn không
+                            if (currentUser.getWishList() == null) {
+                                currentUser.setWishList(new ArrayList<>());  // Nếu không có thì tạo mới danh sách
+                            }
+
+                            // Thêm món đồ vào danh sách yêu thích
+                            currentUser.getWishList().add(item);
+
+                            // Cập nhật lại danh sách yêu thích của người dùng trong Firestore
+                            db.collection("users").document(userId).set(currentUser)
+                                    .addOnSuccessListener(aVoid -> {
+                                        // Hiển thị thông báo khi đã thêm vào danh sách yêu thích
+                                        Toast.makeText(DetailActivity.this, "Đã thêm vào danh sách yêu thích", Toast.LENGTH_SHORT).show();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        // Xử lý lỗi khi không thể cập nhật Firestore
+                                        Toast.makeText(DetailActivity.this, "Lỗi khi lưu vào danh sách yêu thích: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    });
+                        }
+                    } else {
+                        // Xử lý trường hợp không tìm thấy người dùng
+                        Toast.makeText(DetailActivity.this, "Không tìm thấy thông tin người dùng", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    // Xử lý lỗi khi không thể lấy tài liệu người dùng
+                    Toast.makeText(DetailActivity.this, "Lỗi khi lấy dữ liệu người dùng: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+        }
 }

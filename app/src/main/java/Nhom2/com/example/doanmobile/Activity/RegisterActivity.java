@@ -11,11 +11,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
+import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
 import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.Models.Order;
 import Nhom2.com.example.doanmobile.Models.Review;
 import Nhom2.com.example.doanmobile.Models.User;
-import Nhom2.com.example.doanmobile.Models.WishListItem;
 import Nhom2.com.example.doanmobile.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 name,
                                 email,
                                 new ArrayList<CartItem>(),
-                                new ArrayList<WishListItem>(),
+                                new ArrayList<ItemsDomain>(),
                                 new ArrayList<Order>(),
                                 new ArrayList<Review>()
                         );
