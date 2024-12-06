@@ -32,6 +32,8 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
+import Nhom2.com.example.doanmobile.Models.CartItem;
+
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -362,14 +364,14 @@ public class TinyDB {
 
     // Put methods
 
-    public ArrayList<ItemsDomain> getListObject(String key) {
+    public ArrayList<CartItem> getListObject(String key) {
         Gson gson = new Gson();
 
         ArrayList<String> objStrings = getListString(key);
-        ArrayList<ItemsDomain> playerList = new ArrayList<ItemsDomain>();
+        ArrayList<CartItem> playerList = new ArrayList<CartItem>();
 
         for (String jObjString : objStrings) {
-            ItemsDomain player = gson.fromJson(jObjString, ItemsDomain.class);
+            CartItem player = gson.fromJson(jObjString, CartItem.class);
             playerList.add(player);
         }
         return playerList;
@@ -532,11 +534,11 @@ public class TinyDB {
         putString(key, gson.toJson(obj));
     }
 
-    public void putListObject(String key, ArrayList<ItemsDomain> playerList) {
+    public void putListObject(String key, ArrayList<CartItem> playerList) {
         checkForNullKey(key);
         Gson gson = new Gson();
         ArrayList<String> objStrings = new ArrayList<String>();
-        for (ItemsDomain player : playerList) {
+        for (CartItem player : playerList) {
             objStrings.add(gson.toJson(player));
         }
         putListString(key, objStrings);

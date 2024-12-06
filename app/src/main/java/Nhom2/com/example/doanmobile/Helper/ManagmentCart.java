@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
+import Nhom2.com.example.doanmobile.Models.CartItem;
 
 import java.util.ArrayList;
 
@@ -17,51 +18,60 @@ public class ManagmentCart {
         this.tinyDB = new TinyDB(context);
     }
 
-    public void insertItem(ItemsDomain item) {
-        ArrayList<ItemsDomain> listItem = getListCart();
+    public void insertItem(CartItem item) {
+        ArrayList<CartItem> listItem = getListCart();
         boolean existAlready = false;
         int n = 0;
+
         for (int y = 0; y < listItem.size(); y++) {
-            if (listItem.get(y).getTitle().equals(item.getTitle())) {
+            // Check if both the title, size, and color are the same
+            if (listItem.get(y).getTitle().equals(item.getTitle()) &&
+                    listItem.get(y).getSize().equals(item.getSize()) &&
+                    listItem.get(y).getColor().equals(item.getColor())) {
                 existAlready = true;
                 n = y;
                 break;
             }
         }
+
         if (existAlready) {
-            listItem.get(n).setNumberinCart(item.getNumberinCart());
+            // If the item already exists with the same title, size, and color, increase the quantity
+            listItem.get(n).setQuantity(listItem.get(n).getQuantity() + item.getQuantity());
         } else {
+            // Otherwise, add a new item to the cart
             listItem.add(item);
         }
+
+        // Save the updated list to TinyDB
         tinyDB.putListObject("CartList", listItem);
         Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show();
     }
 
-    public ArrayList<ItemsDomain> getListCart() {
+    public ArrayList<CartItem> getListCart() {
         return tinyDB.getListObject("CartList");
     }
 
-    public void minusItem(ArrayList<ItemsDomain> listItem, int position, ChangeNumberItemsListener changeNumberItemsListener) {
-        if (listItem.get(position).getNumberinCart() == 1) {
+    public void minusItem(ArrayList<CartItem> listItem, int position, ChangeNumberItemsListener changeNumberItemsListener) {
+        if (listItem.get(position).getQuantity() == 1) {
             listItem.remove(position);
         } else {
-            listItem.get(position).setNumberinCart(listItem.get(position).getNumberinCart() - 1);
+            listItem.get(position).setQuantity(listItem.get(position).getQuantity() - 1);
         }
         tinyDB.putListObject("CartList", listItem);
         changeNumberItemsListener.changed();
     }
 
-    public void plusItem(ArrayList<ItemsDomain> listItem, int position, ChangeNumberItemsListener changeNumberItemsListener) {
-        listItem.get(position).setNumberinCart(listItem.get(position).getNumberinCart() + 1);
+    public void plusItem(ArrayList<CartItem> listItem, int position, ChangeNumberItemsListener changeNumberItemsListener) {
+        listItem.get(position).setQuantity(listItem.get(position).getQuantity() + 1);
         tinyDB.putListObject("CartList", listItem);
         changeNumberItemsListener.changed();
     }
 
     public Double getTotalFee() {
-        ArrayList<ItemsDomain> listItem2 = getListCart();
+        ArrayList<CartItem> listItem2 = getListCart();
         double fee = 0;
         for (int i = 0; i < listItem2.size(); i++) {
-            fee = fee + (listItem2.get(i).getPrice() * listItem2.get(i).getNumberinCart());
+            fee = fee + (listItem2.get(i).getPrice() * listItem2.get(i).getQuantity());
         }
         return fee;
     }

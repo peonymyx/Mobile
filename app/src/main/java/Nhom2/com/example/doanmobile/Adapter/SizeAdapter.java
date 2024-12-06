@@ -18,7 +18,23 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.Viewholder> {
     Context context;
     int selectPosition = -1;
     int lastSelectedPosition = -1;
+    private OnItemClickListener listener;
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
+    public interface OnItemClickListener {
+        void onItemClick(String color);
+    }
+    public interface OnSizeSelectedListener {
+        void onSizeSelected(String size);  // Truyền màu khi người dùng chọn
+    }
+    private OnSizeSelectedListener sizeSelectedListener;
+
+    public SizeAdapter(ArrayList<String> items, OnSizeSelectedListener sizeSelectedListener) {
+        this.items = items;
+        this.sizeSelectedListener = sizeSelectedListener;
+    }
     public SizeAdapter(ArrayList<String> items) {
         this.items = items;
     }
@@ -33,24 +49,15 @@ public class SizeAdapter extends RecyclerView.Adapter<SizeAdapter.Viewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull SizeAdapter.Viewholder holder, int position) {
-        holder.binding.sizeTxt.setText(items.get(position));
-        holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lastSelectedPosition = selectPosition;
-                selectPosition = holder.getAdapterPosition();
-                notifyItemChanged(lastSelectedPosition);
-                notifyItemChanged(selectPosition);
+        String size = items.get(position);
+        holder.binding.sizeTxt.setText(size);
+
+        // Thiết lập sự kiện click cho mục kích thước
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(size);  // Gọi phương thức trong listener với kích thước được chọn
             }
         });
-
-        if (selectPosition == holder.getAdapterPosition()) {
-            holder.binding.sizeLayout.setBackgroundResource(R.drawable.size_selected);
-            holder.binding.sizeTxt.setTextColor(context.getResources().getColor(R.color.purple));
-        } else {
-            holder.binding.sizeLayout.setBackgroundResource(R.drawable.size_unselected);
-            holder.binding.sizeTxt.setTextColor(context.getResources().getColor(R.color.black));
-        }
     }
 
     @Override

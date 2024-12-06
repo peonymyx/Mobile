@@ -13,16 +13,17 @@ import com.bumptech.glide.request.RequestOptions;
 import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
 import Nhom2.com.example.doanmobile.Helper.ChangeNumberItemsListener;
 import Nhom2.com.example.doanmobile.Helper.ManagmentCart;
+import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.databinding.ViewholderCartBinding;
 
 import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
-    ArrayList<ItemsDomain> listItemSelected;
+    ArrayList<CartItem> listItemSelected;
     ChangeNumberItemsListener changeNumberItemsListener;
     private ManagmentCart managmentCart;
 
-    public CartAdapter(ArrayList<ItemsDomain> listItemSelected, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
+    public CartAdapter(ArrayList<CartItem> listItemSelected, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
         this.listItemSelected = listItemSelected;
         this.changeNumberItemsListener = changeNumberItemsListener;
         managmentCart = new ManagmentCart(context);
@@ -40,8 +41,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
     public void onBindViewHolder(@NonNull CartAdapter.Viewholder holder, int position) {
         holder.binding.titleTxt.setText(listItemSelected.get(position).getTitle());
         holder.binding.feeEachItem.setText("$" + listItemSelected.get(position).getPrice());
-        holder.binding.totalEachItem.setText("$" + Math.round((listItemSelected.get(position).getNumberinCart() * listItemSelected.get(position).getPrice())));
-        holder.binding.numberItemTxt.setText(String.valueOf(listItemSelected.get(position).getNumberinCart()));
+        holder.binding.info.setText("Size: " + listItemSelected.get(position).getSize()+ "  -   Color: " + listItemSelected.get(position).getColor());
+        holder.binding.totalEachItem.setText("$" + Math.round((listItemSelected.get(position).getQuantity() * listItemSelected.get(position).getPrice())));
+        holder.binding.numberItemTxt.setText(String.valueOf(listItemSelected.get(position).getQuantity()));
 
         Glide.with(holder.itemView.getContext())
                 .load(listItemSelected.get(position).getPicUrl().get(0))
