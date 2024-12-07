@@ -48,7 +48,7 @@
                 android:id="@+id/editUserInfoSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -151,14 +151,20 @@
 
                 <Button
                     android:id="@+id/btnSaveChanges"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="@color/black"
+                    android:layout_width="339dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="70dp"
+                    android:backgroundTint="@color/pink"
                     android:text="Save Changes"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:orientation="vertical"></LinearLayout>
 
 
         </LinearLayout>

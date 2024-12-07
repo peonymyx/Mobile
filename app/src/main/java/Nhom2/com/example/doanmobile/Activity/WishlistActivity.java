@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,8 +34,8 @@ public class WishlistActivity extends AppCompatActivity {
         setContentView(binding.getRoot());  // Set the root view
 
         // Initialize RecyclerView using binding
-        binding.wishlistView.setLayoutManager(new LinearLayoutManager(this));
-
+//        binding.wishlistView.setLayoutManager(new LinearLayoutManager(this));
+        binding.wishlistView.setLayoutManager(new GridLayoutManager(this, 2));
         // Set up the back button using binding
         binding.backBtn.setOnClickListener(v -> finish());  // Make sure 'backBtn' is correctly referenced
 

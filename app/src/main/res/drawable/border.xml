@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 <!--    <solid android:color="@android:color/white" /> &lt;!&ndash; Nền trắng &ndash;&gt;-->
     <stroke
-        android:width="2dp"
-        android:color="#CCCCCC" /> <!-- Viền xám -->
+        android:width="1dp"
+        android:color="#FF4081" /> <!-- Viền xám -->
     <corners android:radius="8dp" /> <!-- Bo tròn góc -->
     <padding
         android:left="8dp"

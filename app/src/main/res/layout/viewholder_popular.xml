@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="$123"
-        android:textColor="@color/purple"
+        android:textColor="@color/pink"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt"
         app:layout_constraintStart_toEndOf="@+id/oldPriceTxt"
@@ -114,5 +114,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/priceTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/priceTxt"
-        app:srcCompat="@drawable/review" />
+        app:srcCompat="@drawable/baseline_rate_review_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

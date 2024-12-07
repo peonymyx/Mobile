@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User Name"
-                android:textColor="@color/black"
+                android:textColor="@color/pink"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -127,6 +127,7 @@
                     android:id="@+id/changePassBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="@drawable/border"
                     android:orientation="horizontal">
 
@@ -148,7 +149,8 @@
                 <LinearLayout
                     android:id="@+id/editBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:background="@drawable/border"
                     android:orientation="horizontal">
 
@@ -171,12 +173,19 @@
                     android:id="@+id/logoutBtn"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/pink"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="Log out"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:orientation="vertical"></LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
