@@ -1,5 +1,6 @@
 package Nhom2.com.example.doanmobile.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -63,6 +64,11 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     user.updatePassword(newPassword).addOnCompleteListener(task1 -> {
                         if (task1.isSuccessful()) {
                             Toast.makeText(ChangePasswordActivity.this, "Password changed.", Toast.LENGTH_SHORT).show();
+                            // Logout and return to intro for re-authentication
+                            mAuth.signOut();
+                            Intent intent = new Intent(this, IntroActivity.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             Toast.makeText(ChangePasswordActivity.this, "Cannot change your password.", Toast.LENGTH_SHORT).show();
                         }
