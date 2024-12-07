@@ -23,18 +23,19 @@ import java.util.List;
 import Nhom2.com.example.doanmobile.Adapter.OrderAdapter;
 import Nhom2.com.example.doanmobile.Adapter.OrderListAdapter;
 import Nhom2.com.example.doanmobile.Models.Order;
+import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.R;
 
 public class OrderListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private OrderAdapter orderAdapter;
+    private OrderListAdapter orderAdapter;
     private FirebaseFirestore db;
     private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_list); // đảm bảo layout này tồn tại và chứa RecyclerView
+        setContentView(R.layout.activity_order_list);
 
         recyclerView = findViewById(R.id.ordersRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -47,21 +48,33 @@ public class OrderListActivity extends AppCompatActivity {
 
     private void fetchOrdersFromFirestore() {
         db.collection("users").document(userId)
-                .collection("orders")
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<Order> orders = queryDocumentSnapshots.toObjects(Order.class);
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        User currentUser = documentSnapshot.toObject(User.class);
 
-                    if (orders != null && !orders.isEmpty()) {
-                        orderAdapter = new OrderAdapter(orders);
-                        recyclerView.setAdapter(orderAdapter);
+                        // Kiểm tra xem người dùng có đơn hàng không
+                        if (currentUser != null && currentUser.getOrders() != null && !currentUser.getOrders().isEmpty()) {
+                            List<Order> orders = currentUser.getOrders();
+
+                            // Cập nhật adapter với danh sách đơn hàng
+                            orderAdapter = new OrderListAdapter(orders, order -> {
+                                // Khi nhấn vào đơn hàng, mở chi tiết đơn hàng
+                                Intent intent = new Intent(OrderListActivity.this, OrderDetailActivity.class);
+                                intent.putExtra("orderID", order.getOrderID()); // Truyền orderID
+                                startActivity(intent);
+                            });
+                            recyclerView.setAdapter(orderAdapter);
+                        } else {
+                            Toast.makeText(OrderListActivity.this, "No orders found", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
-                        Toast.makeText(this, "No orders found", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(OrderListActivity.this, "User not found", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(e -> {
-                    Log.e("OrderList", "Error fetching orders", e);
-                    Toast.makeText(this, "Error fetching orders", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrderListActivity.this, "Error fetching orders: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
+
 }
