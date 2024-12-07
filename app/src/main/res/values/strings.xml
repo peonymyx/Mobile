@@ -3,4 +3,5 @@
     <string name="introTitle"><font color="#5b4cbd">Your Shoping</font> Destination \nfor Everything</string>
     <string name="introSubtitle">Get personalized recommendations\n Enjoy fast, free shipping</string>
     <string name="singin">Already have an account?<font color="#5b4cbd"> Sign In</font></string>
+    <string name="default_web_client_id">172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com</string>
 </resources>
