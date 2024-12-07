@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("FirebaseAuth", "User Email: " + email_db);
 
                             //chuyển đến màn hình chính
-                            Intent intent = new Intent(this, MainActivity2.class);
+                            Intent intent = new Intent(this, MainActivity.class);
                             //xóa mọi Activity trước đó để không quay lại màn hình đăng nhập
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
