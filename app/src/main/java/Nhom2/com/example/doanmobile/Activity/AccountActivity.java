@@ -46,7 +46,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void fetchUserData(String userID) {
-        db.collection("Users").document(userID)
+        db.collection("users").document(userID)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {

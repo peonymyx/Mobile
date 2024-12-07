@@ -55,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.MainActivity2"
+            android:name=".Activity.MainActivity"
             android:exported="false" />
     </application>
 

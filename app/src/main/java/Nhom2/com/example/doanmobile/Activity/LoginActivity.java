@@ -11,13 +11,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
     private FirebaseAuth mAuth;
-    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
 
         // Login button click listener
         binding.loginBtn.setOnClickListener(v -> loginUser());
@@ -61,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("FirebaseAuth", "User Display Name: " + displayName);
 
                             // Chuyển đến màn hình chính
-                            Intent intent = new Intent(this, MainActivity2.class);
+                            Intent intent = new Intent(this, MainActivity.class);
                             intent.putExtra("userID", uid);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
