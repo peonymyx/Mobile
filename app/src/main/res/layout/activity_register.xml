@@ -9,31 +9,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create an account"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="10dp"
+            android:text="Create an account"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
         <!-- Name Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="5dp"
+            android:hint="Full Name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameEdt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,13 +41,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username or Email"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="5dp"
+            android:hint="Username or Email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEdt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,13 +55,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="5dp"
+            android:hint="Password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordEdt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,13 +69,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="5dp"
+            android:hint="Confirm Password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmPasswordEdt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,19 +84,19 @@
             android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create Account"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="#FF4081"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="24dp"
             android:padding="16dp"
-            android:textAllCaps="false" />
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
 
         <!-- Login Text -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,8 +109,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Login"
-                android:textStyle="bold"
-                android:textColor="#FF4081" />
+                android:textColor="#FF4081"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

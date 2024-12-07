@@ -7,18 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".Activity.IntroActivity">
 
+    <!-- ImageView: Ensure it scales properly within the screen size -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="559dp"
-        android:layout_height="524dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/intro" />
+        app:srcCompat="@drawable/intro"
+        app:layout_constraintVertical_bias="0.3"   />
 
+    <!-- Title TextView: Centered below ImageView, adjusts for different screen sizes -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -28,10 +29,11 @@
         android:textSize="31sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <!-- Subtitle TextView: Adjusting according to the space -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -43,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!-- Button: Ensures it has proper margins and fits in the screen -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startBtn"
         style="@android:style/Widget.Button"
@@ -55,12 +58,12 @@
         android:text="Let's Get Started"
         android:textColor="@color/white"
         android:textSize="18sp"
-
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+    <!-- Sign In TextView: Positioned at the bottom with margin to avoid overlap -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -74,5 +77,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startBtn"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintVertical_bias="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
