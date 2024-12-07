@@ -1,11 +1,14 @@
 package Nhom2.com.example.doanmobile.Models;
 import java.util.List;
+
+import Nhom2.com.example.doanmobile.Domain.ItemsDomain;
+
 public class User {
     private String userID;
     private String name;
     private String email;
     private List<CartItem> cart;
-    private List<WishListItem> wishList;
+    private List<ItemsDomain> wishList;
     private List<Order> orders;
     private List<Review> reviews;
 
@@ -13,7 +16,7 @@ public class User {
         // Required for Firestore
     }
 
-    public User(String userID, String name, String email, List<CartItem> cart, List<WishListItem> wishList, List<Order> orders, List<Review> reviews) {
+    public User(String userID, String name, String email, List<CartItem> cart, List<ItemsDomain> wishList, List<Order> orders, List<Review> reviews) {
         this.userID = userID;
         this.name = name;
         this.email = email;
@@ -56,11 +59,11 @@ public class User {
         this.cart = cart;
     }
 
-    public List<WishListItem> getWishList() {
+    public List<ItemsDomain> getWishList() {
         return wishList;
     }
 
-    public void setWishList(List<WishListItem> wishList) {
+    public void setWishList(List<ItemsDomain> wishList) {
         this.wishList = wishList;
     }
 

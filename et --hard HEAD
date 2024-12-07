@@ -1,0 +1,65 @@
+[33mcommit 2d4bc68c8cdc05890381dd5763b8d9041aa5b57b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 8137327 dd80540
+Author: peonymyx <137298561+peonymyx@users.noreply.github.com>
+Date:   Fri Dec 6 19:01:16 2024 +0700
+
+    Merge pull request #2 from peonymyx/other
+    
+    commit
+
+[33mcommit dd80540d1583fddc450f0cec2f97ea0b0406ff4e[m[33m ([m[1;31morigin/other[m[33m)[m
+Author: Vanduyn39 <phanthivanduyen@gmail.com>
+Date:   Fri Dec 6 18:50:16 2024 +0700
+
+    commit
+
+[33mcommit 8137327ae1e3b70b449727144b4a30c5da344d40[m
+Merge: 9e4cbf4 95f5fe0
+Author: peonymyx <137298561+peonymyx@users.noreply.github.com>
+Date:   Thu Dec 5 23:38:45 2024 +0700
+
+    Merge pull request #1 from peonymyx/other
+    
+    login/register
+
+[33mcommit 95f5fe079821f5e61a25c4a0a197d299ffcf5f44[m
+Author: lhggiang <luutru040204@gmail.com>
+Date:   Thu Dec 5 23:16:48 2024 +0700
+
+    login/register
+
+[33mcommit 9e4cbf447ad0b80eeb89d2b7e57e282f80b709c3[m
+Author: peonymyx <peonymyx@gmail.com>
+Date:   Wed Dec 4 12:50:31 2024 +0700
+
+    database
+
+[33mcommit 8c86c31cad5e16b64e4b343c0fa6d8cb1e7c314c[m
+Author: Vanduyn39 <phanthivanduyen@gmail.com>
+Date:   Mon Dec 2 16:46:47 2024 +0700
+
+    commit
+
+[33mcommit 5693dca93f958c1a503f318034a9fb30670ac544[m
+Author: peonymyx <137298561+peonymyx@users.noreply.github.com>
+Date:   Wed Nov 27 05:30:37 2024 +0700
+
+    Create README.md
+
+[33mcommit 41860916c7ff1d402bb93fe2f337730888f8b68d[m
+Author: peonymyx <peonymyx@gmail.com>
+Date:   Wed Nov 27 05:19:25 2024 +0700
+
+    database
+
+[33mcommit 59e03c140140783a26b891fd6473bfab8f7207fe[m
+Author: peonymyx <peonymyx@gmail.com>
+Date:   Wed Nov 27 01:37:38 2024 +0700
+
+    firebase
+
+[33mcommit 83b5549557035fee1a1937d34c3a5065f44fdb0a[m
+Author: peonymyx <peonymyx@gmail.com>
+Date:   Wed Nov 27 01:35:22 2024 +0700
+
+    commit

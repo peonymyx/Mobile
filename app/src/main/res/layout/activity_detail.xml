@@ -184,15 +184,34 @@ dolore magna aliqua. Ut enim ad minim veniam, quis
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/AddtoCartBtn"
-                android:layout_margin="32dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                style="@android:style/Widget.Button"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add to Cart" />
+                android:layout_margin="32dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/AddtoCartBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Add to Cart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    style="@android:style/Widget.Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/wishListBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="♡"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    style="@android:style/Widget.Button" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

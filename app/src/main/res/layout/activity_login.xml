@@ -91,6 +91,7 @@
             android:layout_marginBottom="24dp">
 
             <ImageView
+                android:id="@+id/googleSignInBtn"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/ic_google"

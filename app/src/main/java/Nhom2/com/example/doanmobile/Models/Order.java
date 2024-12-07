@@ -5,14 +5,14 @@ import java.util.List;
 public class Order {
     private String orderID;
     private String status;
-    private String address;
+    private Address address;
     private String phone;
     private List<CartItem> items;
 
     public Order() {
     }
 
-    public Order(String orderID, String status, String address, String phone, List<CartItem> items) {
+    public Order(String orderID, String status, Address address, String phone, List<CartItem> items) {
         this.orderID = orderID;
         this.status = status;
         this.address = address;
@@ -37,11 +37,11 @@ public class Order {
         this.status = status;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 

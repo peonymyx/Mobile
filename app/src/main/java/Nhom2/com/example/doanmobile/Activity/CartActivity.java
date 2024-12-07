@@ -1,25 +1,28 @@
 package Nhom2.com.example.doanmobile.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import java.util.ArrayList;
+
 import Nhom2.com.example.doanmobile.Adapter.CartAdapter;
 import Nhom2.com.example.doanmobile.Helper.ManagmentCart;
+import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.databinding.ActivityCartBinding;
 
 public class CartActivity extends BaseActivity {
     private ActivityCartBinding binding;
-    private double tax;
     private ManagmentCart managmentCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         binding = ActivityCartBinding.inflate(getLayoutInflater());
+        binding = ActivityCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        binding.checkoutBtn.setOnClickListener(v -> startActivity(new Intent(CartActivity.this, CheckoutActivity.class)));
         managmentCart = new ManagmentCart(this);
 
         calculatorCart();
@@ -27,7 +30,16 @@ public class CartActivity extends BaseActivity {
         initCartList();
 
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
 
+        // Reload cart data and update UI
+        ArrayList<CartItem> cartItems = managmentCart.getListCart();
+        CartAdapter cartAdapter = new CartAdapter(cartItems, this, this::calculatorCart);
+        binding.cartView.setAdapter(cartAdapter);
+        cartAdapter.notifyDataSetChanged();
+    }
     private void initCartList() {
         if (managmentCart.getListCart().isEmpty()) {
             binding.emptyTxt.setVisibility(View.VISIBLE);
@@ -48,7 +60,7 @@ public class CartActivity extends BaseActivity {
     private void calculatorCart() {
         double percentTax = 0.02;
         double delivery = 10;
-        tax = Math.round((managmentCart.getTotalFee() * percentTax * 100.0)) / 100.0;
+        double tax = Math.round((managmentCart.getTotalFee() * percentTax * 100.0)) / 100.0;
 
         double total = Math.round((managmentCart.getTotalFee() + tax + delivery) * 100.0) / 100.0;
         double itemTotal = Math.round((managmentCart.getTotalFee() * 100.0)) / 100.0;
