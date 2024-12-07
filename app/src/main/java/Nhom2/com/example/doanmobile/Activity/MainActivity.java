@@ -3,6 +3,7 @@ package Nhom2.com.example.doanmobile.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -97,24 +98,33 @@ public class MainActivity extends BaseActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        items.add(issue.getValue(CategoryDomain.class));
+                        CategoryDomain category = issue.getValue(CategoryDomain.class);
+                        if (category != null) {
+                            items.add(category);
+                        }
                     }
+
                     if (!items.isEmpty()) {
                         binding.recyclerViewOffical.setLayoutManager(new LinearLayoutManager(
                                 MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
                         binding.recyclerViewOffical.setAdapter(new CategoryAdapter(items));
                         binding.recyclerViewOffical.setNestedScrollingEnabled(true);
+                    } else {
+//                        binding.emptyStateCategory.setVisibility(View.VISIBLE); // Trạng thái không có danh mục
                     }
+
                     binding.progressBarOfficial.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                binding.progressBarOfficial.setVisibility(View.GONE);
+                Toast.makeText(MainActivity.this, "Lỗi tải danh mục!", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 
     private void initBanner() {
         DatabaseReference myRef = database.getReference("Banner");
