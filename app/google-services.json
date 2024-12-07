@@ -13,10 +13,12 @@
           "package_name": "Nhom2.com.example.doanmobile"
         }
       },
-      "oauth_client": [{
-        "client_id": "YOUR_DEFAULT_WEB_CLIENT_ID.apps.googleusercontent.com",
-        "client_type": 3
-    }],
+      "oauth_client": [
+        {
+          "client_id": "172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCvvkOsP_lVkhwCaoY7hpTTEUUWN92owHY"
@@ -24,7 +26,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
