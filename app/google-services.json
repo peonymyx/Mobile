@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "172747403192-1rkkakatgl6eso7pq5v5skh47l45uhr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "Nhom2.com.example.doanmobile",
+            "certificate_hash": "286904e68def56866dfd5afd84b9f8a9a7960539"
+          }
+        },
+        {
           "client_id": "172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com",
           "client_type": 3
         }
