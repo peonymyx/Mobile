@@ -16,6 +16,7 @@ public class ProfileActivity extends AppCompatActivity {
     private ActivityProfileBinding binding;
     private FirebaseFirestore db;
     private FirebaseAuth mAuth;
+    private String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         // Get userID from Intent
-        String userID = getIntent().getStringExtra("userID");
+        userID = getIntent().getStringExtra("userID");
 
         if (userID != null) {
             fetchUserData(userID);
@@ -40,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void fetchUserData(String userID) {
-        db.collection("Users").document(userID)
+        db.collection("users").document(userID)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
@@ -71,6 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
         // Edit button
         binding.editBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, EditProfileActivity.class);
+            intent.putExtra("userID", userID);
             startActivity(intent);
         });
 
