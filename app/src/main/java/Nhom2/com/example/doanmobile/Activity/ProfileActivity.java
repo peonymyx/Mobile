@@ -69,6 +69,13 @@ public class ProfileActivity extends AppCompatActivity {
         // Back button
         binding.backBtn.setOnClickListener(v -> finish());
 
+        // Change password button
+        binding.changePassBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ChangePasswordActivity.class);
+            intent.putExtra("userID", userID);
+            startActivity(intent);
+        });
+
         // Edit button
         binding.editBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, EditProfileActivity.class);

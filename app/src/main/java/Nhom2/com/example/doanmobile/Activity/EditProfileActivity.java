@@ -77,7 +77,7 @@ public class EditProfileActivity extends AppCompatActivity {
             String newName = binding.etUserName.getText().toString();
             String newEmail = binding.etEmail.getText().toString().trim();
 
-            if (newName.isEmpty() || newEmail.isEmpty()) {
+            if (newName.isBlank() || newEmail.isBlank()) {
                 Toast.makeText(EditProfileActivity.this, "Please enter your new profile information.", Toast.LENGTH_SHORT).show();
                 return;
             }
