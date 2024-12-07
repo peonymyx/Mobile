@@ -9,71 +9,108 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an account"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
 
         <!-- Name Input -->
-        <EditText
-            android:id="@+id/nameEdt"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:padding="12dp"
-            android:backgroundTint="#000000"
-            android:layout_marginBottom="12dp"/>
+            android:hint="Full Name"
+            android:layout_marginBottom="16dp">
 
-        <!-- Email Input -->
-        <EditText
-            android:id="@+id/emailEdt"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Username or Email Input -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:backgroundTint="#000000"
-            android:layout_marginBottom="12dp"/>
+            android:hint="Username or Email"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Input -->
-        <EditText
-            android:id="@+id/passwordEdt"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:backgroundTint="#000000"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Confirm Password Input -->
-        <EditText
-            android:id="@+id/confirmPasswordEdt"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:backgroundTint="#000000"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Register Button -->
         <Button
             android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
-            android:background="@color/teal_700"
+            android:text="Create Account"
+            android:backgroundTint="#FF4081"
             android:textColor="#FFFFFF"
-            android:padding="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="24dp"
+            android:padding="16dp"
+            android:textAllCaps="false" />
 
         <!-- Login Text -->
-        <TextView
-            android:id="@+id/loginText"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account? Login here"
-            android:textColor="@color/teal_700"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="#808080" />
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login"
+                android:textStyle="bold"
+                android:textColor="#FF4081" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
