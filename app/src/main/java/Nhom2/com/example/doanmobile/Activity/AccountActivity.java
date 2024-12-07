@@ -46,7 +46,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void fetchUserData(String userID) {
-        db.collection("users").document(userID)
+        db.collection("Users").document(userID)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
@@ -83,5 +83,13 @@ public class AccountActivity extends AppCompatActivity {
                 Log.e("AccountActivity", "UserID is null, cannot navigate to Profile.");
             }
         });
+
+        // Orders button - Navigate to OrderListActivity
+        binding.ordersBtn.setOnClickListener(v -> {
+            // Mở OrderListActivity để hiển thị các đơn hàng
+            Intent intent = new Intent(AccountActivity.this, OrderListActivity.class);
+            startActivity(intent);
+        });
     }
 }
+

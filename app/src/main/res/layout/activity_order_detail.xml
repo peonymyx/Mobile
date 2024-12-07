@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Guideline for spacing -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/orderID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order ID"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/orderStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order Status"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/orderID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/orderAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order Address"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/orderStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/orderPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order Phone"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/orderAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/orderItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Order Items"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/orderPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
