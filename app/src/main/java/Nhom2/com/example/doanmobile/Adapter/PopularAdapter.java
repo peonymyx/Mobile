@@ -20,8 +20,8 @@ import Nhom2.com.example.doanmobile.databinding.ViewholderPopularBinding;
 import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewholder> {
-    ArrayList<ItemsDomain> items;
-    Context context;
+    private ArrayList<ItemsDomain> items;
+    private Context context;
 
     public PopularAdapter(ArrayList<ItemsDomain> items) {
         this.items = items;
@@ -31,31 +31,34 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewhold
     @Override
     public PopularAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        ViewholderPopularBinding binding = ViewholderPopularBinding.inflate(LayoutInflater.from(context),parent,false);
+        ViewholderPopularBinding binding = ViewholderPopularBinding.inflate(LayoutInflater.from(context), parent, false);
         return new Viewholder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PopularAdapter.Viewholder holder, int position) {
-        holder.binding.titleTxt.setText(items.get(position).getTitle());
-        holder.binding.reviewTxt.setText("" + items.get(position).getReview());
-        holder.binding.priceTxt.setText("$" + items.get(position).getPrice());
-        holder.binding.ratingTxt.setText("(" + items.get(position).getRating() + ")");
-        holder.binding.oldPriceTxt.setText("$" + items.get(position).getOldPrice());
-        holder.binding.oldPriceTxt.setPaintFlags(holder.binding.oldPriceTxt.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.binding.ratingBar.setRating((float) items.get(position).getRating());
+        ItemsDomain item = items.get(position);
 
+        holder.binding.titleTxt.setText(item.getTitle());
+        holder.binding.reviewTxt.setText(String.valueOf(item.getReview()));
+        holder.binding.priceTxt.setText("$" + item.getPrice());
+        holder.binding.ratingTxt.setText("(" + item.getRating() + ")");
+        holder.binding.oldPriceTxt.setText("$" + item.getOldPrice());
+        holder.binding.oldPriceTxt.setPaintFlags(holder.binding.oldPriceTxt.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        holder.binding.ratingBar.setRating((float) item.getRating());
+
+        // Sử dụng Glide để tải ảnh
         RequestOptions options = new RequestOptions();
         options = options.transform(new CenterCrop());
-
         Glide.with(context)
-                .load(items.get(position).getPicUrl().get(0))
+                .load(item.getPicUrl().get(0)) // Giả sử mỗi sản phẩm có ít nhất 1 ảnh
                 .apply(options)
                 .into(holder.binding.pic);
 
+        // Sự kiện click vào sản phẩm
         holder.itemView.setOnClickListener(v -> {
-            Intent intent=new Intent(context, DetailActivity.class);
-            intent.putExtra("object",items.get(position));
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra("object", item); // Truyền đối tượng sản phẩm sang DetailActivity
             context.startActivity(intent);
         });
     }
@@ -63,6 +66,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewhold
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    // Phương thức để cập nhật danh sách sản phẩm
+    public void updateItems(ArrayList<ItemsDomain> newItems) {
+        this.items = newItems;
+        notifyDataSetChanged(); // Cập nhật giao diện
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
