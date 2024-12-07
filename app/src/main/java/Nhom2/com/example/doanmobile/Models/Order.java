@@ -24,7 +24,6 @@ public class Order {
     public String getOrderID() {
         return orderID;
     }
-
     public void setOrderID(String orderID) {
         this.orderID = orderID;
     }
@@ -60,4 +59,5 @@ public class Order {
     public void setItems(List<CartItem> items) {
         this.items = items;
     }
+
 }
