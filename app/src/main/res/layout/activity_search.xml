@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:src="@drawable/back"
         android:contentDescription="Back"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
     <!-- Thanh tìm kiếm -->
     <LinearLayout
