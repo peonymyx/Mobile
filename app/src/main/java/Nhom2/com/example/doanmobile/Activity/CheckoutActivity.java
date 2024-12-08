@@ -98,9 +98,28 @@ public class CheckoutActivity extends BaseActivity {
 
         // Hiển thị thông báo
         Toast.makeText(this, "Order created: " + order.getOrderID(), Toast.LENGTH_LONG).show();
+
+        // Xóa giỏ hàng
         managmentCart.clearCart();
+
+        // Cập nhật giao diện về trạng thái ban đầu
+        resetCartUI();
+
+        // Đóng màn hình
         finish(); // Quay lại trang trước hoặc chuyển đến trang khác
     }
+
+    private void resetCartUI() {
+        // Cập nhật các giá trị về 0
+        binding.totalFeeTxt.setText("$0.00");
+        binding.taxTxt.setText("$0.00");
+        binding.deliveryTxt.setText("$0.00");
+        binding.totalTxt.setText("$0.00");
+
+        // Làm trống danh sách sản phẩm trong giỏ hàng
+        binding.productListView.setAdapter(new CartAdapter(new ArrayList<>(), this, () -> {}));
+    }
+
     // Lưu đơn hàng vào Firebase Firestore
     private void saveOrderToFirebase(Order order) {
         // Lấy ID người dùng hiện tại
@@ -146,5 +165,4 @@ public class CheckoutActivity extends BaseActivity {
                     Toast.makeText(CheckoutActivity.this, "Failed to get user data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
-
 }

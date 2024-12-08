@@ -19,15 +19,14 @@ public class IntroActivity extends BaseActivity {
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-        // Navigate to Login Activity
+        //chuyển đến trang login
         binding.textView4.setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
         });
 
-        // Start app main flow
+        //chuyển đến trang login
         binding.startBtn.setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
-            finish();
         });
     }
 }

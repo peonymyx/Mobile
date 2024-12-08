@@ -30,16 +30,31 @@ public class CartActivity extends BaseActivity {
         initCartList();
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
 
         // Reload cart data and update UI
         ArrayList<CartItem> cartItems = managmentCart.getListCart();
+
+        // Kiểm tra giỏ hàng trống
+        if (cartItems.isEmpty()) {
+            binding.emptyTxt.setVisibility(View.VISIBLE);
+            binding.scrollViewCart.setVisibility(View.GONE);
+        } else {
+            binding.emptyTxt.setVisibility(View.GONE);
+            binding.scrollViewCart.setVisibility(View.VISIBLE);
+        }
+
         CartAdapter cartAdapter = new CartAdapter(cartItems, this, this::calculatorCart);
         binding.cartView.setAdapter(cartAdapter);
         cartAdapter.notifyDataSetChanged();
+
+        // Cập nhật lại tổng giá trị
+        calculatorCart();
     }
+
     private void initCartList() {
         if (managmentCart.getListCart().isEmpty()) {
             binding.emptyTxt.setVisibility(View.VISIBLE);
