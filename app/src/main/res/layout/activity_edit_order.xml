@@ -5,6 +5,19 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Back Button"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Order ID -->
     <EditText
         android:id="@+id/orderId"
         android:layout_width="match_parent"
@@ -13,6 +26,7 @@
         android:inputType="text"
         android:enabled="false"/>
 
+    <!-- Status -->
     <EditText
         android:id="@+id/status"
         android:layout_width="match_parent"
@@ -21,6 +35,7 @@
         android:inputType="text"
         android:enabled="false"/>
 
+    <!-- Delivery Address Title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +43,7 @@
         android:textStyle="bold"
         android:layout_marginTop="16dp"/>
 
+    <!-- Street Address -->
     <EditText
         android:id="@+id/street"
         android:layout_width="match_parent"
@@ -35,13 +51,15 @@
         android:hint="Street Address"
         android:inputType="text"/>
 
+    <!-- Commune -->
     <EditText
         android:id="@+id/commune"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Street Address"
+        android:hint="Commune"
         android:inputType="text"/>
 
+    <!-- City -->
     <EditText
         android:id="@+id/city"
         android:layout_width="match_parent"
@@ -49,6 +67,7 @@
         android:hint="City"
         android:inputType="text"/>
 
+    <!-- District -->
     <EditText
         android:id="@+id/district"
         android:layout_width="match_parent"
@@ -56,6 +75,7 @@
         android:hint="District"
         android:inputType="text"/>
 
+    <!-- Phone Number -->
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
@@ -63,6 +83,7 @@
         android:hint="Phone Number"
         android:inputType="phone"/>
 
+    <!-- Save Button -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"

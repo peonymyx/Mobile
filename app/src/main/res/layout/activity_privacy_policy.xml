@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chúng tôi cam kết bảo vệ quyền riêng tư của bạn. Vui lòng đọc chính sách bảo mật dưới đây:\n\n1. **Thu thập dữ liệu**: Chúng tôi thu thập thông tin cá nhân như tên, email, địa chỉ và thông tin thanh toán khi bạn tạo tài khoản hoặc thực hiện mua hàng.\n\n2. **Sử dụng dữ liệu**: Thông tin của bạn chỉ được sử dụng để xử lý đơn hàng, nâng cao trải nghiệm mua sắm và gửi các ưu đãi khuyến mãi.\n\n3. **Bảo vệ dữ liệu**: Chúng tôi sử dụng các phương pháp bảo mật để lưu trữ dữ liệu của bạn và đảm bảo tính bảo mật của thông tin.\n\n4. **Chia sẻ dữ liệu với bên thứ ba**: Chúng tôi không bán hay chia sẻ dữ liệu cá nhân của bạn với bên thứ ba, trừ khi cần thiết để xử lý đơn hàng.\n\nBằng việc sử dụng nền tảng của chúng tôi, bạn đồng ý với các thực tiễn bảo mật này."
+            android:textSize="16sp"/>
+    </ScrollView>
+</LinearLayout>

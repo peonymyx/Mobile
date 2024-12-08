@@ -15,6 +15,7 @@ import Nhom2.com.example.doanmobile.Models.Address;
 import Nhom2.com.example.doanmobile.Models.Order;
 import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.R;
+import Nhom2.com.example.doanmobile.databinding.ActivityEditOrderBinding;
 
 public class EditOrderActivity extends AppCompatActivity {
 
@@ -25,11 +26,14 @@ public class EditOrderActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private String orderId;
     private String userId;
+    private ActivityEditOrderBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_order);
+        binding = ActivityEditOrderBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Initialize Firestore and current user
         db = FirebaseFirestore.getInstance();
@@ -46,6 +50,13 @@ public class EditOrderActivity extends AppCompatActivity {
 
         // Handle save button click
         saveButton.setOnClickListener(v -> saveOrderDetails());
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
+        // Back button
+        binding.backBtn.setOnClickListener(v -> finish());
     }
 
     private void initializeViews() {

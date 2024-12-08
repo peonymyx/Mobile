@@ -1,36 +1,66 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp"
-    android:background="@drawable/border">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/orderTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Order Title"
-        android:textSize="18sp"
-        android:textColor="@color/black" />
+        android:background="@drawable/border"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/orderStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        <!-- Order Title -->
+        <TextView
+            android:id="@+id/orderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Order Title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/orderStatus"
+            app:layout_constraintWidth_percent="0.5" />
 
-    <Button
-        android:id="@+id/editOrderBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit" />
+        <!-- Order Status -->
+        <TextView
+            android:id="@+id/orderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/orderTitle"
+            app:layout_constraintEnd_toStartOf="@id/editOrderBtn" />
 
-    <Button
-        android:id="@+id/deleteOrderBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete" />
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/editOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/orderStatus"
+            app:layout_constraintEnd_toStartOf="@id/deleteOrderBtn" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/deleteOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editOrderBtn"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

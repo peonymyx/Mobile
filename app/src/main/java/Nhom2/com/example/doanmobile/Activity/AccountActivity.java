@@ -90,6 +90,19 @@ public class AccountActivity extends AppCompatActivity {
             Intent intent = new Intent(AccountActivity.this, OrderListActivity.class);
             startActivity(intent);
         });
+
+        // Sự kiện click cho Terms of User
+        binding.termsBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TermsOfUserActivity.class);
+            startActivity(intent);
+        });
+
+        // Sự kiện click cho Privacy Policy
+        binding.privacyBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PrivacyPolicyActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
 

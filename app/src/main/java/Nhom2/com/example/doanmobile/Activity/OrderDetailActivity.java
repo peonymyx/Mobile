@@ -15,17 +15,21 @@ import Nhom2.com.example.doanmobile.Models.CartItem;
 import Nhom2.com.example.doanmobile.Models.Order;
 import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.R;
+import Nhom2.com.example.doanmobile.databinding.ActivityOrderDetailBinding;
 
 public class OrderDetailActivity extends AppCompatActivity {
 
     private TextView orderID, orderStatus, orderAddress, orderPhone, orderItems;
     private FirebaseFirestore db;
     private String userID;
+    private ActivityOrderDetailBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail);
+        binding = ActivityOrderDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Ánh xạ các view từ layout
         orderID = findViewById(R.id.orderID);
@@ -45,6 +49,13 @@ public class OrderDetailActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Order ID is missing", Toast.LENGTH_SHORT).show();
         }
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
+        // Back button
+        binding.backBtn.setOnClickListener(v -> finish());
     }
 
     private void fetchOrderDetails(String receivedOrderID) {

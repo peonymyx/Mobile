@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms of User"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chào mừng bạn đến với Cửa hàng chúng tôi. Dưới đây là các điều khoản và điều kiện sử dụng nền tảng trực tuyến của chúng tôi:\n\n1. **Điều kiện sử dụng**: Bạn phải từ 18 tuổi trở lên để sử dụng dịch vụ của chúng tôi.\n\n2. **Thông tin sản phẩm**: Chúng tôi nỗ lực hết mình để đảm bảo thông tin về sản phẩm là chính xác, nhưng chúng tôi không chịu trách nhiệm về các lỗi.\n\n3. **Thanh toán**: Chúng tôi chấp nhận các phương thức thanh toán khác nhau như thẻ tín dụng, PayPal, v.v. Tất cả các giao dịch đều được bảo mật.\n\n4. **Vận chuyển**: Đơn hàng sẽ được xử lý và vận chuyển trong vòng 2-5 ngày làm việc.\n\n5. **Chính sách đổi trả**: Vui lòng xem lại chính sách đổi trả của chúng tôi để biết chi tiết.\n\nBằng việc sử dụng dịch vụ của chúng tôi, bạn đồng ý với các điều khoản này. Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi."
+            android:textSize="16sp"/>
+    </ScrollView>
+</LinearLayout>

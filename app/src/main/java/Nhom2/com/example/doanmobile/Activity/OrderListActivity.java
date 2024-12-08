@@ -13,17 +13,21 @@ import Nhom2.com.example.doanmobile.Adapter.OrderListAdapter;
 import Nhom2.com.example.doanmobile.Models.Order;
 import Nhom2.com.example.doanmobile.Models.User;
 import Nhom2.com.example.doanmobile.R;
+import Nhom2.com.example.doanmobile.databinding.ActivityOrderListBinding;
 
 public class OrderListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private OrderListAdapter orderAdapter;
     private FirebaseFirestore db;
     private String userId;
+    private ActivityOrderListBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_list);
+        binding = ActivityOrderListBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         recyclerView = findViewById(R.id.ordersRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -32,7 +36,14 @@ public class OrderListActivity extends AppCompatActivity {
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         fetchOrdersFromFirestore();
+        setupListeners();
     }
+
+    private void setupListeners() {
+        // Back button
+        binding.backBtn.setOnClickListener(v -> finish());
+    }
+
 
     private void fetchOrdersFromFirestore() {
         db.collection("users").document(userId)
