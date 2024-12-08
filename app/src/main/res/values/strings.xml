@@ -1,7 +1,120 @@
 <resources>
     <string name="app_name">doanMOBILE</string>
-    <string name="introTitle"><font color="#FF4081">Your Shopping</font> Destination \nfor Everything</string>
+    <string name="introTitle"><font color="#FF4081">Your Shopping</font> Destination\nfor Everything</string>
     <string name="introSubtitle">Get personalized recommendations\n Enjoy fast, free shipping</string>
     <string name="singin">Already have an account?<font color="#FF4081"> Sign In</font></string>
     <string name="default_web_client_id">172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com</string>
+
+    <!-- Chính sách khách hàng -->
+    <string name="terms_of_user">
+        Để đảm bảo quyền lợi cho Quý khách hàng trong quá trình mua sắm, Lalaland gửi bạn những thông tin về chính sách giao nhận hàng và thanh toán như sau:
+        \n<b>1. Chính sách chung về Giao - Nhận hàng tại Lalaland</b>
+        \n<i>a. Phí ship khi mua hàng online:</i> Miễn phí vận chuyển cho đơn dưới 498K, còn lại Phí ship toàn quốc là 20.000đ.
+        \n<i>b. Thời gian nhận hàng</i>
+        \nKhách hàng khi đã được xác nhận đơn hàng đặt mua trên app và các kênh thông tin chính thức khác của Lalaland sẽ nhận được sản phẩm trong vòng từ 3-5 ngày làm việc (tùy từng khu vực nhận hàng). Nhân viên chăm sóc tại Lalaland sẽ liên hệ với bạn trong thời gian sớm nhất có thể để hoàn tất thủ tục liên quan.
+        \nĐối với các đơn hàng đồng phục hoặc sản phẩm in ấn khác, thời gian sản xuất và giao hàng có thể sẽ lâu hơn. Lalaland sẽ liên hệ và thông báo cụ thể về thời gian giao - nhận đến Quý khách.
+
+        \n<b>2. Quyền lợi về việc Thử và Nhận đồ khi mua sắm</b>
+        \nĐể mang đến trải nghiệm mua sắm thuận lợi và thoải mái nhất cho khách hàng, Lalaland luôn xây dựng những chính sách thân thiện nhất. Theo đó, tất cả khách hàng đặt mua sản phẩm của Lalaland bằng phương thức mua hàng online đều được hưởng những quyền lợi như sau:
+        \n- Khách hàng được xem và thử đồ trước khi thanh toán.
+        \n- Nếu thấy sản phẩm không vừa, không ưng ý, khách hàng hoàn toàn có thể trả lại ngay cho bưu tá và không cần thanh toán bất cứ chi phí phát sinh nào.
+        \n<b>3. Với khách hàng đã thanh toán và muốn đổi trả</b>
+        \nKhách hàng có nhu cầu khiếu nại, đổi trả sản phẩm do lỗi của Lalaland có thể liên hệ qua Hotline 0912345678 để được hỗ trợ sớm nhất.
+        \nTư vấn viên sẽ hướng dẫn khách hàng các bước cần thiết để tiến hành trả đổi trả.
+        \nKhách hàng được hỗ trợ đổi hàng với trường hợp thử đồ tại nhà mà không đúng với kích cỡ cơ thể. Khách hàng có thể tiến hành đổi trả online hoặc đổi trả trực tiếp tại hệ thống cửa hàng của Lalaland trên toàn quốc. Hàng hóa khi đổi trả cần được giữ nguyên tem mác và chưa qua sử dụng, giặt tẩy.
+        \nLưu ý: Các sản phẩm đồng giá và khuyến mãi Sale trên 50% sẽ không áp dụng đổi trả.
+
+        \nHy vọng, những thông tin trên đây có thể giúp cho trải nghiệm mua sắm online của bạn tại Lalaland được an tâm và thuận tiện hơn!
+    </string>
+
+    <!-- Quy định bảo mật -->
+    <string name="privacy_policy">
+        <b>Căn cứ pháp lý</b>
+        \n- Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 2013 và các văn bản hướng dẫn thi hành;
+        \n- Bộ luật Dân sự năm 2015 và các văn bản hướng dẫn thi hành;
+        \n- Luật An ninh mạng năm 2018 và các văn bản hướng dẫn thi hành;
+        \n- Luật Giao dịch điện tử năm 2005 và các văn bản hướng dẫn thi hành;
+        \n- Nghị định 13/2023/NĐ-CP ngày 24/02/2023 của Chính phủ về bảo vệ dữ liệu cá nhân và các văn bản hướng dẫn thi hành;
+        \n- Các văn bản pháp luật khác có liên quan.
+        \nCông ty Cổ phần Thời trang Lalaland (mã số doanh nghiệp: 0801234567; địa chỉ trụ sở chính: 279 Nguyễn Tri Phương, phường 5, quận 10, thành phố Hồ Chí Minh) luôn đặt tinh thần thượng tôn pháp luật lên hàng đầu và đặc biệt coi trọng việc bảo vệ Dữ liệu cá nhân của các Chủ thể dữ liệu.
+
+        \nTrong quá trình Khách hàng giao dịch, tham gia các chương trình khuyến mại, quảng cáo, marketing và các hình thức xúc tiến thương mại tại website, hoặc ứng dụng, hoặc tại cửa hàng của Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland, Chúng tôi có thể thu thập và xử lý một số dữ liệu cá nhân của quý Khách hàng theo các điều khoản dưới đây:
+
+        \n<b>1. Định nghĩa và diễn giải</b>
+        \n- “Chúng tôi” là Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland.
+        \n- “Công ty liên kết” là bất kỳ tổ chức nào trực tiếp hoặc gián tiếp kiểm soát hoặc bị kiểm soát bởi, hoặc chịu sự kiểm soát chung (sau đây gọi chung là “Quyền kiểm soát”) bởi bên đó vào thời điểm cung cấp và tiếp nhận Dữ liệu cá nhân được nêu tại đây. Quyền kiểm soát đối với một bên có nghĩa là nắm giữ trực tiếp hoặc gián tiếp ít nhất năm mươi phần trăm (50%) số cổ phiếu có quyền biểu quyết (hoặc các loại hình tương đương) của bên đó hoặc quyền điều hành hoặc quyền chỉ đạo điều hành ban quản lý hoặc các chính sách của bên đó (cho dù thông qua cổ phiếu có quyền biểu quyết của chủ sở hữu hoặc thành viên hoặc các quyền lợi khác của chủ sở hữu, thông qua hợp đồng hoặc các hình thức khác).
+        \n- “Khách hàng” là các tổ chức, hoặc cá nhân tiếp cận, tìm hiểu, đăng ký, sử dụng hoặc có liên quan trong quy trình hoạt động, cung cấp Sản phẩm, và Dịch vụ của Chúng tôi.
+        \n- “Bên thứ ba” là các tổ chức, hoặc cá nhân không phải Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland và Khách hàng.
+        \n- “Sản phẩm” là các mặt hàng, hàng hóa, quà tặng… thuộc quyền sở hữu của Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland cung cấp cho Khách hàng.
+        \n- “Dịch vụ” là các dịch vụ của Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland cung cấp cho Khách hàng.
+        \n- “Dữ liệu cá nhân” là thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự trên môi trường điện tử gắn liền với một con người cụ thể hoặc giúp xác định một con người cụ thể. Dữ liệu cá nhân bao gồm Dữ liệu cá nhân cơ bản và Dữ liệu cá nhân nhạy cảm.
+        \n- “Xử lý dữ liệu cá nhân” là một chuỗi hoạt động bao gồm: thu thập, ghi, sao chép, sử dụng, lưu trữ, chỉnh sửa, chuyển giao, chia sẻ, tổng hợp, khóa, xóa, tiêu hủy hoặc các hình thức khác.
+        \n- “Hệ thống” là website, ứng dụng hoặc các cửa hàng của Công ty Cổ phần Thời trang Lalaland và các Công ty liên kết của Công ty Cổ phần Thời trang Lalaland.
+        \n<b>2. Phạm vi thông tin thu thập</b>
+        \n- Thông tin khách hàng cung cấp: Chúng tôi thu thập bất kỳ thông tin nào Khách hàng  cung cấp khi mua các Sản phẩm/sử dụng Dịch vụ của Chúng tôi, bao gồm cả thông tin mà Khách hàng  bắt buộc phải cung cấp khi đăng ký/đăng nhập tài khoản như tên, địa chỉ, điện thoại, địa chỉ email, tài khoản ngân hàng, thông tin thanh toán, v.v và thông tin khách hàng tự nguyện cung cấp như bài viết, thông tin, hình ảnh, tài liệu, dữ liệu được Khách hàng  đăng tải, thông tin khi khách hàng đưa ra ý kiến, phản hồi, khiếu nại, trả lời các bảng điều tra thông tin mà Chúng tôi đưa ra, qua bất cứ phương tiện và hình thức nào, thông tin được khách hàng cấp quyền trên thiết bị của Khách hàng để chia sẻ thông tin với Chúng tôi. Mọi thông tin khai báo phải đảm bảo tính chính xác và hợp pháp, Chúng tôi không chịu trách nhiệm trong trường hợp thông tin Khách hàng cung cấp là không chính xác.
+        \n- Thông tin tự động: Chúng tôi tự động thu thập một số loại thông tin nhất định khi khách hàng sử dụng Sản phẩm, và Dịch vụ của Chúng tôi. Chúng tôi sử dụng camera, wifi và các công nghệ khác để nhận diện người và phương tiện ra vào Cửa hàng, khu vui chơi và các khu vực thuộc quản lý của Chúng tôi, cho mục đích đảm bảo an ninh, an toàn, kiểm soát lưu lượng, hành vi, thói quen tiêu dùng của khách hàng để điều chỉnh cách thức phục vụ khách hàng tốt hơn.
+        \n- Thông tin từ các nguồn khác: Chúng tôi có thể thu thập thông tin về khách hàng từ các nguồn khác một cách hợp pháp, bao gồm nhưng không giới hạn ở nhà cung cấp dịch vụ, đối tác, tổ chức tài chính, nền tảng mạng xã hội và các nguồn công khai có sẵn.
+        \n<b>3. Mục đích sử dụng Dữ liệu cá nhân</b>
+        \nCác Dữ liệu cá nhân được thu thập theo Điều 1 của Chính sách này sẽ được sử dụng trong phạm vi phù hợp và cần thiết cho mục đích thương mại đúng đắn của Chúng tôi trên cơ sở đảm bảo tuân thủ các quy định pháp luật hiện hành. Cụ thể như sau:
+
+        \n- Vận hành, cung cấp sản phẩm: gọi điện/tin nhắn xác nhận việc đặt hàng, thông báo về trạng thái đơn hàng và thời gian giao hàng, xác nhận việc hủy đơn hàng (nếu có) và các thao tác khác nhằm xử lý các giao dịch liên quan đến Sản phẩm, và Dịch vụ của Chúng tôi
+        \n- Đo lường việc sử dụng, phân tích thông tin khách hàng, thói quen tiêu dùng, phân tích hiệu suất, sửa lỗi, cung cấp hỗ trợ, cải thiện và phát triển Sản phẩm của Chúng tôi.
+        \n- Gửi thư ngỏ, thư cảm ơn, giới thiệu Sản phẩm, và Dịch vụ mới hoặc các chương trình khuyến mại của Chúng tôi.
+        \n- Thực hiện các chương trình khuyến mại của Chúng tôi, bao gồm: chương trình khuyến mại do Chúng tôi tự thực hiện hoặc phối hợp với bên thứ ba thực hiện.
+        \n- Các khảo sát để chăm sóc Khách hàng tốt hơn.
+        \n- Xác minh danh tính và đảm bảo tính bảo mật Dữ liệu cá nhân của Khách hàng.
+        \n- Giải quyết khiếu nại.
+        \n- Các trường hợp có sự yêu cầu của cơ quan Nhà nước có thẩm quyền, hoặc bắt buộc phải cung cấp theo quy định của pháp luật.
+        \n- Mục đích hợp lý khác nhằm phục vụ yêu cầu của Khách hàng.
+        \n<b>4. Xử lý hình ảnh</b>
+        \nBằng việc đồng ý với Chính sách này, khách hàng đồng thời đồng ý:
+
+        \n- Cho phép Chúng tôi xử lý hình ảnh của khách hàng trong các chương trình xúc tiến thương mại liên quan đến Sản phẩm, và Dịch vụ của Chúng tôi. Chúng tôi sẽ có quyền Xử lý hình ảnh của khách hàng mà không bị giới hạn về thời gian cho các mục đích sau đây:
+        \n- Quảng cáo, trưng bày, giới thiệu về Chúng tôi cũng như các Sản phẩm, và/hoặc Dịch vụ của Chúng tôi;
+        \n- Đăng tải trên các phương tiện truyền thông của Chúng tôi (bao gồm nhưng không giới hạn ở trang web, báo chí, mạng xã hội, tạp chí, cẩm nang, ấn phẩm nội bộ;
+        \n- Các mục đích khác phù hợp với quy định của pháp luật mà không làm tổn hại đến danh dự, nhân phẩm, uy tín của khách hàng.
+        \n- Khách hàng sẽ không khiếu nại và/hoặc đòi hỏi bất cứ chi phí nào về việc Chúng tôi xử lý hình ảnh của khách hàng, cho dù tại thời điểm bắt đầu thu thập cũng như thời gian sau đó và sẽ không rút lại sự đồng ý trong mọi trường hợp.
+        \n- Khách hàng đồng ý rằng các hình ảnh của khách hàng có thể sử dụng ở dạng in và/hoặc các định dạng điện tử, chúng tôi sẽ áp dụng biện pháp thích hợp để đảm bảo rằng các hình ảnh của khách hàng sẽ được sử dụng duy nhất cho các mục đích nêu trên. Tuy nhiên, khách hàng hiểu rằng chúng tôi không thể loại bỏ hoàn toàn các rủi ro và khách hàng đồng ý rằng chúng tôi sẽ không chịu trách nhiệm đối với (i) việc các bên thứ ba khác sử dụng hình ảnh của khách hàng khi chưa có sự đồng ý của chúng tôi và (ii) các hậu quả phát sinh theo đó.
+        \n<b>5. Thời gian lưu trữ và phương thức lưu trữ Dữ liệu cá nhân</b>
+        \nChúng tôi sẽ bắt đầu Xử lý dữ liệu cá nhân ngay khi nhận được Dữ liệu cá nhân cho đến khi Dữ liệu cá nhân được xóa, hủy theo các quy định của pháp luật và (hoặc) quy định, quyết định tại từng thời điểm của Chúng tôi. Còn lại trong mọi trường hợp Dữ liệu cá nhân Khách hàng sẽ được bảo mật, lưu trữ trên máy chủ của Chúng tôi đặt tại lãnh thổ Việt Nam.
+
+        \n<b>6. Các bên có thể tiếp cận Dữ liệu cá nhân của Khách hàng</b>
+        \nDữ liệu cá nhân của Khách hàng được Chúng tôi cam kết bảo mật tuyệt đối theo Chính sách này và chỉ được chia sẻ cho các Bên dưới đây nhằm phục vụ các mục đích nêu tại Chính sách này:
+
+        \n- Các đối tác giao hàng, viễn thông, cung cấp dịch vụ/hàng hóa, đại lý, nhà thầu, bên tư vấn, nhân viên, người lao động, đối tác khác mà Chúng tôi hợp tác tại từng thời điểm nhằm thực hiện các công việc theo phạm vi nêu tại Chính sách này;
+        \n- Công ty liên kết của Chúng tôi (công ty mẹ, công ty con và/hoặc các công ty cùng chịu chung sự kiểm soát, chi phối với Chúng tôi);
+        \n- Luật sư, cố vấn, đơn vị kiểm toán của Chúng tôi;
+        \n- Bên xử lý Dữ liệu cá nhân cho Chúng tôi theo Hợp đồng cung cấp dịch vụ tại từng thời điểm;
+        \n- Cung cấp thông tin khi tái cấu trúc, chuyển nhượng doanh nghiệp;
+        \n- Các bên khác khi được sự đồng ý của Khách hàng.
+        \n<b>7. Cách thức xử lý Dữ liệu cá nhân</b>
+        \n- Tùy từng thời điểm và tùy theo từng mục đích nêu tại Chính sách này, Chúng tôi sẽ thực hiện một hoặc nhiều hoạt động Xử lý dữ liệu cá nhân.
+        \n- Các hoạt động Xử lý dữ liệu cá nhân có thể được Chúng tôi thực hiện theo cách thức tự động hoặc không tự động, bằng các phương tiện điện tử hoặc các cách thức thủ công, v.v. mà Chúng tôi cho là phù hợp.
+        \n- Chúng tôi có thể trực tiếp Xử lý dữ liệu cá nhân hoặc gián tiếp thông qua bên thứ ba hợp pháp theo quy định của pháp luật và quy định tại Chính sách này.
+        \n<b>8. Quyền của Khách hàng đối với Dữ liệu cá nhân</b>
+        \nKhách hàng có đầy đủ các quyền theo quy định của pháp luật đối với Dữ liệu cá nhân của mình:
+
+        \n- Yêu cầu Chúng tôi cung cấp thông tin về việc xử lý dữ liệu cá nhân của mình.
+        \n- Yêu cầu Chúng tôi chỉnh sửa, cập nhật hoặc xóa dữ liệu cá nhân không chính xác hoặc không phù hợp.
+        \n- Yêu cầu Công ty ngừng xử lý dữ liệu cá nhân của mình trong một số trường hợp nhất định.
+        \n- Khiếu nại với cơ quan có thẩm quyền nếu Chúng tôi vi phạm quy định về bảo vệ dữ liệu cá nhân.
+        \n- Các quyền khác tại Chính sách này.
+        \n<b>9. Trách nhiệm của Chúng tôi</b>
+        \n- Áp dụng các biện pháp kỹ thuật và tổ chức thích hợp để bảo vệ dữ liệu cá nhân.
+        \n- Chỉ định người phụ trách bảo vệ dữ liệu cá nhân và thông báo cho cơ quan có thẩm quyền.
+        \n- Thông báo cho cơ quan có thẩm quyền trong trường hợp xảy ra vi phạm bảo vệ dữ liệu cá nhân.
+        \n- Đánh giá tác động đối với việc chuyển dữ liệu cá nhân ra nước ngoài và thực hiện các biện pháp bảo đảm phù hợp.
+        \n- Tuân thủ các quy định khác của pháp luật về bảo vệ dữ liệu cá nhân.
+        \n<b>10. Nguyên tắc Bảo vệ Dữ liệu cá nhân</b>
+        \n- Chỉ thu thập và xử lý dữ liệu cá nhân cần thiết cho mục đích hoạt động kinh doanh hợp pháp.
+        \n- Đảm bảo dữ liệu cá nhân được thu thập và xử lý một cách công bằng, hợp pháp và minh bạch.
+        \n- Áp dụng các biện pháp kỹ thuật và tổ chức thích hợp để bảo vệ dữ liệu cá nhân khỏi bị truy cập, sử dụng hoặc tiết lộ trái phép.
+        \n- Chỉ lưu giữ dữ liệu cá nhân trong thời gian cần thiết cho mục đích xử lý.
+        \n- Đảm bảo dữ liệu cá nhân được lưu trữ chính xác và được cập nhật khi cần thiết.
+        \n<b>11. Điều khoản chung</b>
+        \n- Chúng tôi có quyền chỉnh sửa, cập nhật Chính Sách này vào bất kỳ thời điểm nào khi cần thiết, bản cập nhật sẽ được công bố trên Hệ Thống và sẽ được ghi ngày để Khách Hàng nhận biết được bản mới nhất.
+        \n- Khách hàng cần đọc kỹ Chính sách này và tất cả các phiên bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này (nếu có) trước khi cung cấp Dữ liệu cá nhân cho Chúng tôi. Việc khách hàng ấn xác nhận “đồng ý”/”chấp thuận” hoặc các hình thức xác nhận khác (nếu có) theo đề nghị của Chúng tôi hoặc việc khách hàng tiếp tục sử dụng Sản Phẩm/Dịch vụ của Chúng tôi sẽ được hiểu là khách hàng đã đọc, hiểu rõ, chấp nhận toàn bộ nội dung Chính sách này, kể cả các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, và tự nguyện đồng ý cho phép chúng tôi được Xử lý dữ liệu cá nhân theo toàn bộ nội dung Chính sách này, kể cả các phiên bản cập nhật, sửa đổi và (hoặc) bổ sung của Chính sách này tại từng thời điểm.
+        \n- Nếu khách hàng không đồng ý với bất kỳ nội dung nào của Chính sách này, kể cả các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, khách hàng vui lòng không cung cấp hoặc không tiếp tục cung cấp Dữ liệu cá nhân cho chúng tôi và (hoặc) không sử dụng hoặc không tiếp tục sử dụng Sản phẩm, và Dịch vụ của Chúng tôi.
+        \n- Để làm rõ, việc đồng ý với nội dung của Chính sách này, kể cả các bản cập nhật, sửa đổi và (hoặc) bổ sung của Chính sách này có thể là điều kiện tiên quyết hoặc điều kiện cần thiết để khách hàng được sử dụng hoặc tiếp tục sử dụng các Sản phẩm, và Dịch vụ của Chúng tôi. Trường hợp khách hàng không đồng ý toàn bộ Chính sách này hay các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, tùy từng trường hợp, khách hàng có thể không sử dụng được hoặc không tiếp tục Sử dụng được một phần hoặc toàn bộ bất kỳ hoặc tất cả Sản phẩm, và Dịch vụ của Chúng tôi. Trường hợp chúng tôi phải sửa đổi, bổ sung hoặc thay thế Chính sách này nhằm đáp ứng tuân thủ quy định của pháp luật hoặc theo yêu cầu của Cơ quan Nhà nước có thẩm quyền, bản Chính sách sửa đổi, cập nhật đó sẽ có hiệu lực áp dụng ngay mà không cần bất kỳ sự đồng ý cụ thể nào từ Khách hàng.
+    </string>
 </resources>
