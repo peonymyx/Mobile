@@ -3,6 +3,7 @@ package Nhom2.com.example.doanmobile.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,7 +47,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void fetchUserData(String userID) {
-        db.collection("Users").document(userID)
+        db.collection("users").document(userID)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
@@ -91,6 +92,24 @@ public class AccountActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Sự kiện click cho Store System
+        binding.storeBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, StoreSystemActivity.class);
+            startActivity(intent);
+        });
+
+        // Sự kiện click cho FAQ
+        binding.faqBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, FaqActivity.class);
+            startActivity(intent);
+        });
+
+        // Sự kiện click cho Shipping Policy
+        binding.shippingBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ShippingPolicyActivity.class);
+            startActivity(intent);
+        });
+
         // Sự kiện click cho Terms of User
         binding.termsBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, TermsOfUserActivity.class);
@@ -102,7 +121,5 @@ public class AccountActivity extends AppCompatActivity {
             Intent intent = new Intent(this, PrivacyPolicyActivity.class);
             startActivity(intent);
         });
-
     }
 }
-

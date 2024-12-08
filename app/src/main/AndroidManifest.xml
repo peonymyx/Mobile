@@ -16,6 +16,15 @@
         android:theme="@style/Theme.DoanMOBILE"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.ShippingPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.StoreSystemActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.PrivacyPolicyActivity"
             android:exported="false" />
         <activity

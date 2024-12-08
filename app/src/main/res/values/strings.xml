@@ -9,9 +9,9 @@
     <string name="terms_of_user">
         Để đảm bảo quyền lợi cho Quý khách hàng trong quá trình mua sắm, Lalaland gửi bạn những thông tin về chính sách giao nhận hàng và thanh toán như sau:
         \n<b>1. Chính sách chung về Giao - Nhận hàng tại Lalaland</b>
-        \n<i>a. Phí ship khi mua hàng online:</i> Miễn phí vận chuyển cho đơn dưới 498K, còn lại Phí ship toàn quốc là 20.000đ.
+        \n<i>a. Phí ship khi mua hàng online:</i> Miễn phí vận chuyển cho đơn dưới 500K, còn lại Phí ship toàn quốc là 20.000đ.
         \n<i>b. Thời gian nhận hàng</i>
-        \nKhách hàng khi đã được xác nhận đơn hàng đặt mua trên app và các kênh thông tin chính thức khác của Lalaland sẽ nhận được sản phẩm trong vòng từ 3-5 ngày làm việc (tùy từng khu vực nhận hàng). Nhân viên chăm sóc tại Lalaland sẽ liên hệ với bạn trong thời gian sớm nhất có thể để hoàn tất thủ tục liên quan.
+        \nKhách hàng khi đã được xác nhận đơn hàng đặt mua trên app và các kênh thông tin chính thức khác của Lalaland sẽ nhận được sản phẩm trong vòng từ 2-5 ngày làm việc (tùy từng khu vực nhận hàng). Nhân viên chăm sóc tại Lalaland sẽ liên hệ với bạn trong thời gian sớm nhất có thể để hoàn tất thủ tục liên quan.
         \nĐối với các đơn hàng đồng phục hoặc sản phẩm in ấn khác, thời gian sản xuất và giao hàng có thể sẽ lâu hơn. Lalaland sẽ liên hệ và thông báo cụ thể về thời gian giao - nhận đến Quý khách.
 
         \n<b>2. Quyền lợi về việc Thử và Nhận đồ khi mua sắm</b>
@@ -116,5 +116,96 @@
         \n- Khách hàng cần đọc kỹ Chính sách này và tất cả các phiên bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này (nếu có) trước khi cung cấp Dữ liệu cá nhân cho Chúng tôi. Việc khách hàng ấn xác nhận “đồng ý”/”chấp thuận” hoặc các hình thức xác nhận khác (nếu có) theo đề nghị của Chúng tôi hoặc việc khách hàng tiếp tục sử dụng Sản Phẩm/Dịch vụ của Chúng tôi sẽ được hiểu là khách hàng đã đọc, hiểu rõ, chấp nhận toàn bộ nội dung Chính sách này, kể cả các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, và tự nguyện đồng ý cho phép chúng tôi được Xử lý dữ liệu cá nhân theo toàn bộ nội dung Chính sách này, kể cả các phiên bản cập nhật, sửa đổi và (hoặc) bổ sung của Chính sách này tại từng thời điểm.
         \n- Nếu khách hàng không đồng ý với bất kỳ nội dung nào của Chính sách này, kể cả các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, khách hàng vui lòng không cung cấp hoặc không tiếp tục cung cấp Dữ liệu cá nhân cho chúng tôi và (hoặc) không sử dụng hoặc không tiếp tục sử dụng Sản phẩm, và Dịch vụ của Chúng tôi.
         \n- Để làm rõ, việc đồng ý với nội dung của Chính sách này, kể cả các bản cập nhật, sửa đổi và (hoặc) bổ sung của Chính sách này có thể là điều kiện tiên quyết hoặc điều kiện cần thiết để khách hàng được sử dụng hoặc tiếp tục sử dụng các Sản phẩm, và Dịch vụ của Chúng tôi. Trường hợp khách hàng không đồng ý toàn bộ Chính sách này hay các bản cập nhật, sửa đổi và/hoặc bổ sung của Chính sách này, tùy từng trường hợp, khách hàng có thể không sử dụng được hoặc không tiếp tục Sử dụng được một phần hoặc toàn bộ bất kỳ hoặc tất cả Sản phẩm, và Dịch vụ của Chúng tôi. Trường hợp chúng tôi phải sửa đổi, bổ sung hoặc thay thế Chính sách này nhằm đáp ứng tuân thủ quy định của pháp luật hoặc theo yêu cầu của Cơ quan Nhà nước có thẩm quyền, bản Chính sách sửa đổi, cập nhật đó sẽ có hiệu lực áp dụng ngay mà không cần bất kỳ sự đồng ý cụ thể nào từ Khách hàng.
+    </string>
+
+    <string name="store_system">
+        <b>Main Store</b>
+        \nTầng 15, 279 Nguyễn Tri Phương, phường 5, quận 10, TP Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH
+        \nCửa hàng lớn Parking Available
+
+        \n\n<b>SC Vivo City</b>
+        \nTầng 1, Số 1058 Đ. Nguyễn Văn Linh, Tân Phong, Quận 7, TP Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH
+        \nCửa hàng lớn Parking Available
+
+        \n\n<b>Saigon Centre</b>
+        \nTầng 4, Số 65, Đ. Lê Lợi, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH, ĐỒ BẦU
+        \nCửa hàng lớn Parking Available
+
+        \n\n<b>Vincom Grand Park</b>
+        \nTầng 1, TTTM Vincom Mega Mall Grand Park, Khu đô thị Vinhomes Grand Park,
+        \nLong Thạnh Mỹ, Tp. Thủ Đức, Tp. Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH
+        \nCửa Hàng Tiêu Chuẩn Parking Available
+
+        \n\n<b>Vincom Landmark 81</b>
+        \nTầng 1- 2, Số 208, Đ. Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH
+        \nCửa hàng lớn Parking Available
+
+        \n\n<b>Vạn Hạnh Mall</b>
+        \nTầng 1, Số 11, Đ. Sư Vạn Hạnh, Phường 12, Quận 10, TP Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH
+        \nCửa hàng lớn Parking Available
+
+        \n\n<b>Đồng Khởi Q1</b>
+        \nTầng 1 - 3, Đồng Khởi, Số 45, Đ. Lê Thánh Tôn Bến Nghé, Quận 1, Hồ Chí Minh
+        \nNỮ, NAM, KIDS, TRẺ SƠ SINH, ĐỒ BẦU
+        \nCửa hàng lớn
+    </string>
+
+    <string name="faq">
+        <b>1. Sản phẩm có giống với màu và hình ảnh thực tế sản phẩm không?</b>
+        \nChào bạn, sản phẩm như hình bạn nhé. Màu sắc qua ảnh chụp sẽ có thể có chút chênh lệch không đáng kể so với thực tế ạ.
+        
+        \n\n<b>2. Sản phẩm báo hết hàng khi nào sẽ về lại hàng?</b>
+        \nChào bạn, khi sản phẩm vẫn chưa về hàng, bạn theo dõi Fanpage để cập nhật tình trạng sản phẩm nhé.
+        
+        \n\n<b>3. Sản phẩm có được bảo hành không?</b>
+        \nChào bạn, Lalaland không có chính sách bảo hành cho sản phẩm nhé. Rất xin lỗi và mong bạn thông cảm.
+        
+        \n\n<b>4. Lalaland có chấp nhận trả sản phẩm hoàn tiền không?</b>
+        \nChào bạn, Lalaland có chấp nhận trả sản phẩm hoàn tiền nhưng chỉ đối với trường hợp khi lỗi sự cố hay lỗi sản phẩm xuất phát từ phía Lalaland và sản phẩm đó hoặc sản phẩm tương tự không còn hàng.
+        
+        \n\n<b>5. Thời gian áp dụng đổi sản phẩm là bao lâu?</b>
+        \nChào bạn, sản phẩm được đổi hàng trong vòng 7 ngày bạn nhé. Bạn vui lòng gửi/mang theo hóa đơn và sản phẩm phải còn nguyên tem mác, còn nguyên trạng như lúc nhận hàng đến Lalaland để được hỗ trợ đổi hàng ạ.
+        
+        \n\n<b>6. Đổi hàng trực tiếp tại cửa hàng nào?</b>
+        \nChào bạn, Lalaland áp dụng đổi hàng trực tiếp trên toàn hệ thống cửa hàng bạn nhé!
+        
+        \n\n<b>7. Đơn hàng online có thể giao hàng đến những tỉnh thành nào?</b>
+        \nChào bạn, Lalaland nhận giao hàng toàn quốc nhé.
+        
+        \n\n<b>8. Thời gian và phí vận chuyển như thế nào?</b>
+        \nChào bạn, tùy khu vực mà thời gian giao hàng sẽ khác nhau, phí ship đơn trên 500K là 20.000 VNĐ nhé.
+        \n- Đối với khu vực nội thành Hồ Chí Minh: Thời gian giao hàng từ 2-3 ngày làm việc.
+        \n- Đối với ngoại thành Hồ Chí Minh và các tỉnh thành khác: Thời gian giao hàng từ 3-5 ngày làm việc.
+        
+        \n\n<b>9.Có thể thay đổi địa chỉ nhận hàng sau khi đã đặt hàng không?</b>
+        \nChào bạn, bạn có thể thay đổi địa chỉ nhận hàng, bạn vui lòng liên hệ bộ phận chăm sóc khách hàng sớm nhất có thể thông tin số điện thoại, mã đơn hàng và địa chỉ bạn muốn đổi để nhân viên hỗ trợ bạn nhé. Cảm ơn bạn.
+        
+        \n\n<b>10. Có thể thanh toán bằng khi mua hàng trên ứng dụng bằng những cách nào?</b>
+        \nChào bạn, hiện tại Lalaland hỗ trợ 2 hình thức thanh toán như sau:
+        \n- COD (thanh toán khi nhận hàng).
+        \n- Thanh toán trực tiếp tại cửa hàng
+        
+        \n\n<b>11. Quy trình thanh toán online như thế nào?</b>
+        \nChào bạn, Lalaland hiện chưa hỗ trợ phương thức thanh toán online. Bạn có thể ghé shop để xem hàng và thanh toán trực tiếp hoặc đặt hàng và thanh toán khi nhận hàng nhé, lúc nhận hàng bạn có thể xem hàng thoải mái trước khi thanh toán ạ.
+        
+        \n\n<b>12. Có được kiểm tra hàng trước khi thanh toán không?</b>
+        \nĐể đảm bảo sản phẩm được nguyên vẹn nên kiện hàng sẽ được niêm phong nhằm tránh thất lạc. Nên bạn có thể xem hàng sau khi thanh toán cho người vận chuyển, nếu có xảy ra thiếu sót hoặc sản phẩm không đúng, bạn có thể liên hệ với bộ phận CSKH để giải quyết nhé.
+    </string>
+
+    <string name="shipping_policy">
+        <b>Thời gian giao hàng dự kiến</b>
+        \nThời gian giao hàng dự kiến trong khoảng 2-5 ngày được tính kể từ thời điểm đơn hàng được xác nhận thành công trên hệ thống của Lalaland.
+        \n- Đối với khu vực nội thành Hồ Chí Minh: Thời gian giao hàng từ 2-3 ngày làm việc.
+        \n- Đối với ngoại thành Hồ Chí Minh và các tỉnh thành khác: Thời gian giao hàng từ 3-5 ngày làm việc.
+        \nĐối với những đơn hàng gồm sản phẩm đang về lại hàng, thời gian giao hàng sẽ thêm 1-2 ngày so với thời gian giao hàng dự kiến thông thường.
+
+        \n\n<b>Phí giao hàng</b>
+        \nMiễn phí vận chuyển cho đơn dưới 500K, còn lại phí ship toàn quốc là 20.000 VNĐ.
     </string>
 </resources>
