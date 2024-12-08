@@ -29,15 +29,20 @@
 
                 <EditText
                     android:id="@+id/editTextText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableStart="@drawable/search_icon"
-                    android:drawablePadding="8dp"
-                    android:ems="10"
                     android:hint="Search anything"
                     android:inputType="text"
                     android:padding="8dp" />
+
+
+                <ImageView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/search_icon" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="50dp"

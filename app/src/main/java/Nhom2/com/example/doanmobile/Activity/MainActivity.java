@@ -46,6 +46,15 @@ public class MainActivity extends BaseActivity {
     }
 
     private void bottomNavigation() {
+        binding.WishList.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WishlistActivity.class)));
+
+        binding.searchBtn.setOnClickListener(v -> {
+            String keyword = binding.editTextText.getText().toString(); // Lấy từ khóa từ EditText (nếu có)
+            Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+            intent.putExtra("keyword", keyword); // Truyền từ khóa qua Intent
+            startActivity(intent);
+        });
+
         binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
         binding.accountBtn.setOnClickListener(v -> {
             FirebaseUser user = mAuth.getCurrentUser();
@@ -57,7 +66,6 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-        binding.WishList.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, WishlistActivity.class)));
     }
 
     private void initPopular() {
@@ -161,4 +169,5 @@ public class MainActivity extends BaseActivity {
 
         binding.viewPagerSlider.setPageTransformer(compositePageTransformer);
     }
+
 }

@@ -3,6 +3,7 @@ package Nhom2.com.example.doanmobile.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,6 +63,11 @@ public class LoginActivity extends AppCompatActivity {
         // Chuyển sang màn hình đăng ký
         binding.signUp.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
+        });
+
+        TextView forgotPasswordTextView = findViewById(R.id.forgotPasswordTextView);
+        forgotPasswordTextView.setOnClickListener(v -> {
+            startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class)); // Chuyển sang ForgotPasswordActivity
         });
     }
 
