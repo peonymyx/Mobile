@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "172747403192-tm7piosb4nqcpof5s10b89d39evi8t7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "Nhom2.com.example.doanmobile",
+            "certificate_hash": "7a7ee9d3f1eab70701f3d898fb44408bef37deb9"
+          }
+        },
+        {
           "client_id": "172747403192-12ik64s1tbsl5v0jftq65dpgufbj1473.apps.googleusercontent.com",
           "client_type": 3
         }
